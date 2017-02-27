@@ -15,3 +15,6 @@ C:\Users\renzi\Downloads\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.pdb
 C:\Users\renzi\Downloads\CSC-289-master (2)\CSC-289-master\Invoice\Invoice\bin\Debug\Invoice.exe.config
 C:\Users\renzi\Downloads\CSC-289-master (2)\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.exe
 C:\Users\renzi\Downloads\CSC-289-master (2)\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.pdb
+C:\Users\weilandr0843\Source\Repos\CSC-289\CSC-289-master\CSC-289-master\Invoice\Invoice\bin\Debug\Invoice.exe.config
+C:\Users\weilandr0843\Source\Repos\CSC-289\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.exe
+C:\Users\weilandr0843\Source\Repos\CSC-289\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.pdb
