@@ -59,6 +59,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewInvoiceForm.Designer.cs">
+      <DependentUpon>NewInvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -67,11 +73,20 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserDatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDatabaseForm.Designer.cs">
+      <DependentUpon>UserDatabaseForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InvoiceDatabaseForm.resx">
       <DependentUpon>InvoiceDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewInvoiceForm.resx">
+      <DependentUpon>NewInvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDatabaseForm.resx">
+      <DependentUpon>UserDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
