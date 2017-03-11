@@ -66,6 +66,26 @@
             this.invoiceInformationFirstNameLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationAlternatePhoneNumberLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationStreetAddressLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationCommunityLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationStreetAddressLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationCommunityLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationAlternatePhoneNumberLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationFirstNameLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationLastNameLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationAlternatePhoneExtensionLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationPrimaryPhoneNumberLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationWorkOrderTypeLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationAlternatePhoneTypeLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationPrimaryPhoneExtensionLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationEmailLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationPrimaryPhoneTypeLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationNonMilitaryEmailLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationDescriptionOfRequestRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.invoiceInformationAnimalsLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationRequestTimeOfServiceLabel = new System.Windows.Forms.Label();
+            this.invoiceInformationPermissionToEnterLabel = new System.Windows.Forms.Label();
+            this.printInvoiceButton = new System.Windows.Forms.Button();
+            this.invoiceInformationCancelButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.userInformationEntryTab.SuspendLayout();
             this.invoiceSelectionTab.SuspendLayout();
@@ -274,21 +294,41 @@
             // 
             // invoiceInformationTab
             // 
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationCancelButton);
+            this.invoiceInformationTab.Controls.Add(this.printInvoiceButton);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationDescriptionOfRequestRichTextBox);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationPermissionToEnterLabel);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationNonMilitaryEmailLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationNonMilitaryEmailLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationRequestTimeOfServiceLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneTypeLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneTypeLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationRequestTimeOfServiceLabel);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationEmailLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationEmailLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationDescriptionLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneExtensionLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneExtensionLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneTypeLabel);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationAnimalsLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneTypeLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationWorkOrderTypeLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationWorkOrderTypeLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAnimalsLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneNumberLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneNumberLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneExtensionLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneExtensionLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationLastNameLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationLastNameLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPermissionToEnterLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationFirstNameLabel);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneNumberLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationFirstNameLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationCommunityLabel);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneNumberLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationStreetAddressLabel);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationCommunityLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationStreetAddressLabelPrompt);
             this.invoiceInformationTab.Location = new System.Drawing.Point(4, 22);
             this.invoiceInformationTab.Name = "invoiceInformationTab";
@@ -301,146 +341,326 @@
             // invoiceInformationNonMilitaryEmailLabelPrompt
             // 
             this.invoiceInformationNonMilitaryEmailLabelPrompt.AutoSize = true;
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.Location = new System.Drawing.Point(4, 283);
+            this.invoiceInformationNonMilitaryEmailLabelPrompt.Location = new System.Drawing.Point(6, 309);
             this.invoiceInformationNonMilitaryEmailLabelPrompt.Name = "invoiceInformationNonMilitaryEmailLabelPrompt";
             this.invoiceInformationNonMilitaryEmailLabelPrompt.Size = new System.Drawing.Size(93, 13);
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.TabIndex = 0;
+            this.invoiceInformationNonMilitaryEmailLabelPrompt.TabIndex = 99;
             this.invoiceInformationNonMilitaryEmailLabelPrompt.Text = "Non-Military Email:";
             // 
             // invoiceInformationRequestTimeOfServiceLabelPrompt
             // 
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.AutoSize = true;
-            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Location = new System.Drawing.Point(3, 369);
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Location = new System.Drawing.Point(6, 482);
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.Name = "invoiceInformationRequestTimeOfServiceLabelPrompt";
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.Size = new System.Drawing.Size(127, 13);
-            this.invoiceInformationRequestTimeOfServiceLabelPrompt.TabIndex = 0;
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.TabIndex = 99;
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.Text = "Request Time of Service:";
             // 
             // invoiceInformationPrimaryPhoneTypeLabelPrompt
             // 
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt.AutoSize = true;
-            this.invoiceInformationPrimaryPhoneTypeLabelPrompt.Location = new System.Drawing.Point(3, 145);
+            this.invoiceInformationPrimaryPhoneTypeLabelPrompt.Location = new System.Drawing.Point(6, 174);
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt.Name = "invoiceInformationPrimaryPhoneTypeLabelPrompt";
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt.Size = new System.Drawing.Size(105, 13);
-            this.invoiceInformationPrimaryPhoneTypeLabelPrompt.TabIndex = 0;
+            this.invoiceInformationPrimaryPhoneTypeLabelPrompt.TabIndex = 99;
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt.Text = "Primary Phone Type:";
             // 
             // invoiceInformationEmailLabelPrompt
             // 
             this.invoiceInformationEmailLabelPrompt.AutoSize = true;
-            this.invoiceInformationEmailLabelPrompt.Location = new System.Drawing.Point(4, 257);
+            this.invoiceInformationEmailLabelPrompt.Location = new System.Drawing.Point(6, 282);
             this.invoiceInformationEmailLabelPrompt.Name = "invoiceInformationEmailLabelPrompt";
             this.invoiceInformationEmailLabelPrompt.Size = new System.Drawing.Size(35, 13);
-            this.invoiceInformationEmailLabelPrompt.TabIndex = 0;
+            this.invoiceInformationEmailLabelPrompt.TabIndex = 99;
             this.invoiceInformationEmailLabelPrompt.Text = "Email:";
             // 
             // invoiceInformationDescriptionLabelPrompt
             // 
             this.invoiceInformationDescriptionLabelPrompt.AutoSize = true;
-            this.invoiceInformationDescriptionLabelPrompt.Location = new System.Drawing.Point(3, 340);
+            this.invoiceInformationDescriptionLabelPrompt.Location = new System.Drawing.Point(6, 360);
             this.invoiceInformationDescriptionLabelPrompt.Name = "invoiceInformationDescriptionLabelPrompt";
             this.invoiceInformationDescriptionLabelPrompt.Size = new System.Drawing.Size(214, 13);
-            this.invoiceInformationDescriptionLabelPrompt.TabIndex = 0;
+            this.invoiceInformationDescriptionLabelPrompt.TabIndex = 99;
             this.invoiceInformationDescriptionLabelPrompt.Text = "Description of Request (Including Location):";
             // 
             // invoiceInformationPrimaryPhoneExtensionLabelPrompt
             // 
             this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.AutoSize = true;
-            this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.Location = new System.Drawing.Point(3, 116);
+            this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.Location = new System.Drawing.Point(6, 147);
             this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.Name = "invoiceInformationPrimaryPhoneExtensionLabelPrompt";
             this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.Size = new System.Drawing.Size(127, 13);
-            this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.TabIndex = 0;
+            this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.TabIndex = 99;
             this.invoiceInformationPrimaryPhoneExtensionLabelPrompt.Text = "Primary Phone Extension:";
             // 
             // invoiceInformationAlternatePhoneTypeLabelPrompt
             // 
             this.invoiceInformationAlternatePhoneTypeLabelPrompt.AutoSize = true;
-            this.invoiceInformationAlternatePhoneTypeLabelPrompt.Location = new System.Drawing.Point(4, 228);
+            this.invoiceInformationAlternatePhoneTypeLabelPrompt.Location = new System.Drawing.Point(6, 255);
             this.invoiceInformationAlternatePhoneTypeLabelPrompt.Name = "invoiceInformationAlternatePhoneTypeLabelPrompt";
             this.invoiceInformationAlternatePhoneTypeLabelPrompt.Size = new System.Drawing.Size(113, 13);
-            this.invoiceInformationAlternatePhoneTypeLabelPrompt.TabIndex = 0;
+            this.invoiceInformationAlternatePhoneTypeLabelPrompt.TabIndex = 99;
             this.invoiceInformationAlternatePhoneTypeLabelPrompt.Text = "Alternate Phone Type:";
             // 
             // invoiceInformationWorkOrderTypeLabelPrompt
             // 
             this.invoiceInformationWorkOrderTypeLabelPrompt.AutoSize = true;
-            this.invoiceInformationWorkOrderTypeLabelPrompt.Location = new System.Drawing.Point(3, 311);
+            this.invoiceInformationWorkOrderTypeLabelPrompt.Location = new System.Drawing.Point(6, 336);
             this.invoiceInformationWorkOrderTypeLabelPrompt.Name = "invoiceInformationWorkOrderTypeLabelPrompt";
             this.invoiceInformationWorkOrderTypeLabelPrompt.Size = new System.Drawing.Size(89, 13);
-            this.invoiceInformationWorkOrderTypeLabelPrompt.TabIndex = 0;
+            this.invoiceInformationWorkOrderTypeLabelPrompt.TabIndex = 99;
             this.invoiceInformationWorkOrderTypeLabelPrompt.Text = "Work Order Type";
             // 
             // invoiceInformationAnimalsLabelPrompt
             // 
             this.invoiceInformationAnimalsLabelPrompt.AutoSize = true;
-            this.invoiceInformationAnimalsLabelPrompt.Location = new System.Drawing.Point(4, 423);
+            this.invoiceInformationAnimalsLabelPrompt.Location = new System.Drawing.Point(6, 533);
             this.invoiceInformationAnimalsLabelPrompt.Name = "invoiceInformationAnimalsLabelPrompt";
             this.invoiceInformationAnimalsLabelPrompt.Size = new System.Drawing.Size(88, 13);
-            this.invoiceInformationAnimalsLabelPrompt.TabIndex = 0;
+            this.invoiceInformationAnimalsLabelPrompt.TabIndex = 99;
             this.invoiceInformationAnimalsLabelPrompt.Text = "Animals in Home:";
             // 
             // invoiceInformationPrimaryPhoneNumberLabelPrompt
             // 
             this.invoiceInformationPrimaryPhoneNumberLabelPrompt.AutoSize = true;
-            this.invoiceInformationPrimaryPhoneNumberLabelPrompt.Location = new System.Drawing.Point(3, 87);
+            this.invoiceInformationPrimaryPhoneNumberLabelPrompt.Location = new System.Drawing.Point(6, 120);
             this.invoiceInformationPrimaryPhoneNumberLabelPrompt.Name = "invoiceInformationPrimaryPhoneNumberLabelPrompt";
             this.invoiceInformationPrimaryPhoneNumberLabelPrompt.Size = new System.Drawing.Size(118, 13);
-            this.invoiceInformationPrimaryPhoneNumberLabelPrompt.TabIndex = 0;
+            this.invoiceInformationPrimaryPhoneNumberLabelPrompt.TabIndex = 99;
             this.invoiceInformationPrimaryPhoneNumberLabelPrompt.Text = "Primary Phone Number:";
             // 
             // invoiceInformationAlternatePhoneExtensionLabelPrompt
             // 
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.AutoSize = true;
-            this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Location = new System.Drawing.Point(4, 199);
+            this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Location = new System.Drawing.Point(6, 228);
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Name = "invoiceInformationAlternatePhoneExtensionLabelPrompt";
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Size = new System.Drawing.Size(135, 13);
-            this.invoiceInformationAlternatePhoneExtensionLabelPrompt.TabIndex = 0;
+            this.invoiceInformationAlternatePhoneExtensionLabelPrompt.TabIndex = 99;
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Text = "Alternate Phone Extension:";
             // 
             // invoiceInformationLastNameLabelPrompt
             // 
             this.invoiceInformationLastNameLabelPrompt.AutoSize = true;
-            this.invoiceInformationLastNameLabelPrompt.Location = new System.Drawing.Point(3, 32);
+            this.invoiceInformationLastNameLabelPrompt.Location = new System.Drawing.Point(6, 39);
             this.invoiceInformationLastNameLabelPrompt.Name = "invoiceInformationLastNameLabelPrompt";
             this.invoiceInformationLastNameLabelPrompt.Size = new System.Drawing.Size(61, 13);
-            this.invoiceInformationLastNameLabelPrompt.TabIndex = 0;
+            this.invoiceInformationLastNameLabelPrompt.TabIndex = 99;
             this.invoiceInformationLastNameLabelPrompt.Text = "Last Name:";
             // 
             // invoiceInformationPermissionToEnterLabelPrompt
             // 
             this.invoiceInformationPermissionToEnterLabelPrompt.AutoSize = true;
-            this.invoiceInformationPermissionToEnterLabelPrompt.Location = new System.Drawing.Point(4, 394);
+            this.invoiceInformationPermissionToEnterLabelPrompt.Location = new System.Drawing.Point(6, 507);
             this.invoiceInformationPermissionToEnterLabelPrompt.Name = "invoiceInformationPermissionToEnterLabelPrompt";
             this.invoiceInformationPermissionToEnterLabelPrompt.Size = new System.Drawing.Size(130, 13);
-            this.invoiceInformationPermissionToEnterLabelPrompt.TabIndex = 0;
+            this.invoiceInformationPermissionToEnterLabelPrompt.TabIndex = 99;
             this.invoiceInformationPermissionToEnterLabelPrompt.Text = "Permission to Enter (PTE):";
             // 
             // invoiceInformationFirstNameLabelPrompt
             // 
             this.invoiceInformationFirstNameLabelPrompt.AutoSize = true;
-            this.invoiceInformationFirstNameLabelPrompt.Location = new System.Drawing.Point(3, 3);
+            this.invoiceInformationFirstNameLabelPrompt.Location = new System.Drawing.Point(6, 12);
             this.invoiceInformationFirstNameLabelPrompt.Name = "invoiceInformationFirstNameLabelPrompt";
             this.invoiceInformationFirstNameLabelPrompt.Size = new System.Drawing.Size(60, 13);
-            this.invoiceInformationFirstNameLabelPrompt.TabIndex = 0;
+            this.invoiceInformationFirstNameLabelPrompt.TabIndex = 999;
             this.invoiceInformationFirstNameLabelPrompt.Text = "First Name:";
             // 
             // invoiceInformationAlternatePhoneNumberLabelPrompt
             // 
             this.invoiceInformationAlternatePhoneNumberLabelPrompt.AutoSize = true;
-            this.invoiceInformationAlternatePhoneNumberLabelPrompt.Location = new System.Drawing.Point(4, 170);
+            this.invoiceInformationAlternatePhoneNumberLabelPrompt.Location = new System.Drawing.Point(6, 201);
             this.invoiceInformationAlternatePhoneNumberLabelPrompt.Name = "invoiceInformationAlternatePhoneNumberLabelPrompt";
             this.invoiceInformationAlternatePhoneNumberLabelPrompt.Size = new System.Drawing.Size(126, 13);
-            this.invoiceInformationAlternatePhoneNumberLabelPrompt.TabIndex = 0;
+            this.invoiceInformationAlternatePhoneNumberLabelPrompt.TabIndex = 99;
             this.invoiceInformationAlternatePhoneNumberLabelPrompt.Text = "Alternate Phone Number:";
             // 
             // invoiceInformationStreetAddressLabelPrompt
             // 
             this.invoiceInformationStreetAddressLabelPrompt.AutoSize = true;
-            this.invoiceInformationStreetAddressLabelPrompt.Location = new System.Drawing.Point(3, 61);
+            this.invoiceInformationStreetAddressLabelPrompt.Location = new System.Drawing.Point(6, 66);
             this.invoiceInformationStreetAddressLabelPrompt.Name = "invoiceInformationStreetAddressLabelPrompt";
             this.invoiceInformationStreetAddressLabelPrompt.Size = new System.Drawing.Size(79, 13);
-            this.invoiceInformationStreetAddressLabelPrompt.TabIndex = 0;
+            this.invoiceInformationStreetAddressLabelPrompt.TabIndex = 99;
             this.invoiceInformationStreetAddressLabelPrompt.Text = "Street Address:";
+            // 
+            // invoiceInformationCommunityLabelPrompt
+            // 
+            this.invoiceInformationCommunityLabelPrompt.AutoSize = true;
+            this.invoiceInformationCommunityLabelPrompt.Location = new System.Drawing.Point(6, 93);
+            this.invoiceInformationCommunityLabelPrompt.Name = "invoiceInformationCommunityLabelPrompt";
+            this.invoiceInformationCommunityLabelPrompt.Size = new System.Drawing.Size(61, 13);
+            this.invoiceInformationCommunityLabelPrompt.TabIndex = 99;
+            this.invoiceInformationCommunityLabelPrompt.Text = "Community:";
+            // 
+            // invoiceInformationStreetAddressLabel
+            // 
+            this.invoiceInformationStreetAddressLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationStreetAddressLabel.Location = new System.Drawing.Point(143, 63);
+            this.invoiceInformationStreetAddressLabel.Name = "invoiceInformationStreetAddressLabel";
+            this.invoiceInformationStreetAddressLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationStreetAddressLabel.TabIndex = 2;
+            this.invoiceInformationStreetAddressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationCommunityLabel
+            // 
+            this.invoiceInformationCommunityLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationCommunityLabel.Location = new System.Drawing.Point(143, 90);
+            this.invoiceInformationCommunityLabel.Name = "invoiceInformationCommunityLabel";
+            this.invoiceInformationCommunityLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationCommunityLabel.TabIndex = 3;
+            this.invoiceInformationCommunityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationAlternatePhoneNumberLabel
+            // 
+            this.invoiceInformationAlternatePhoneNumberLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationAlternatePhoneNumberLabel.Location = new System.Drawing.Point(143, 198);
+            this.invoiceInformationAlternatePhoneNumberLabel.Name = "invoiceInformationAlternatePhoneNumberLabel";
+            this.invoiceInformationAlternatePhoneNumberLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationAlternatePhoneNumberLabel.TabIndex = 7;
+            this.invoiceInformationAlternatePhoneNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationFirstNameLabel
+            // 
+            this.invoiceInformationFirstNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationFirstNameLabel.Location = new System.Drawing.Point(143, 9);
+            this.invoiceInformationFirstNameLabel.Name = "invoiceInformationFirstNameLabel";
+            this.invoiceInformationFirstNameLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationFirstNameLabel.TabIndex = 0;
+            this.invoiceInformationFirstNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationLastNameLabel
+            // 
+            this.invoiceInformationLastNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationLastNameLabel.Location = new System.Drawing.Point(143, 36);
+            this.invoiceInformationLastNameLabel.Name = "invoiceInformationLastNameLabel";
+            this.invoiceInformationLastNameLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationLastNameLabel.TabIndex = 1;
+            this.invoiceInformationLastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationAlternatePhoneExtensionLabel
+            // 
+            this.invoiceInformationAlternatePhoneExtensionLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationAlternatePhoneExtensionLabel.Location = new System.Drawing.Point(143, 225);
+            this.invoiceInformationAlternatePhoneExtensionLabel.Name = "invoiceInformationAlternatePhoneExtensionLabel";
+            this.invoiceInformationAlternatePhoneExtensionLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationAlternatePhoneExtensionLabel.TabIndex = 8;
+            this.invoiceInformationAlternatePhoneExtensionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationPrimaryPhoneNumberLabel
+            // 
+            this.invoiceInformationPrimaryPhoneNumberLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationPrimaryPhoneNumberLabel.Location = new System.Drawing.Point(143, 117);
+            this.invoiceInformationPrimaryPhoneNumberLabel.Name = "invoiceInformationPrimaryPhoneNumberLabel";
+            this.invoiceInformationPrimaryPhoneNumberLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationPrimaryPhoneNumberLabel.TabIndex = 4;
+            this.invoiceInformationPrimaryPhoneNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationWorkOrderTypeLabel
+            // 
+            this.invoiceInformationWorkOrderTypeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationWorkOrderTypeLabel.Location = new System.Drawing.Point(143, 333);
+            this.invoiceInformationWorkOrderTypeLabel.Name = "invoiceInformationWorkOrderTypeLabel";
+            this.invoiceInformationWorkOrderTypeLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationWorkOrderTypeLabel.TabIndex = 12;
+            this.invoiceInformationWorkOrderTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationAlternatePhoneTypeLabel
+            // 
+            this.invoiceInformationAlternatePhoneTypeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationAlternatePhoneTypeLabel.Location = new System.Drawing.Point(143, 252);
+            this.invoiceInformationAlternatePhoneTypeLabel.Name = "invoiceInformationAlternatePhoneTypeLabel";
+            this.invoiceInformationAlternatePhoneTypeLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationAlternatePhoneTypeLabel.TabIndex = 9;
+            this.invoiceInformationAlternatePhoneTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationPrimaryPhoneExtensionLabel
+            // 
+            this.invoiceInformationPrimaryPhoneExtensionLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationPrimaryPhoneExtensionLabel.Location = new System.Drawing.Point(143, 144);
+            this.invoiceInformationPrimaryPhoneExtensionLabel.Name = "invoiceInformationPrimaryPhoneExtensionLabel";
+            this.invoiceInformationPrimaryPhoneExtensionLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationPrimaryPhoneExtensionLabel.TabIndex = 5;
+            this.invoiceInformationPrimaryPhoneExtensionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationEmailLabel
+            // 
+            this.invoiceInformationEmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationEmailLabel.Location = new System.Drawing.Point(143, 279);
+            this.invoiceInformationEmailLabel.Name = "invoiceInformationEmailLabel";
+            this.invoiceInformationEmailLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationEmailLabel.TabIndex = 10;
+            this.invoiceInformationEmailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationPrimaryPhoneTypeLabel
+            // 
+            this.invoiceInformationPrimaryPhoneTypeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationPrimaryPhoneTypeLabel.Location = new System.Drawing.Point(143, 171);
+            this.invoiceInformationPrimaryPhoneTypeLabel.Name = "invoiceInformationPrimaryPhoneTypeLabel";
+            this.invoiceInformationPrimaryPhoneTypeLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationPrimaryPhoneTypeLabel.TabIndex = 6;
+            this.invoiceInformationPrimaryPhoneTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationNonMilitaryEmailLabel
+            // 
+            this.invoiceInformationNonMilitaryEmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationNonMilitaryEmailLabel.Location = new System.Drawing.Point(143, 306);
+            this.invoiceInformationNonMilitaryEmailLabel.Name = "invoiceInformationNonMilitaryEmailLabel";
+            this.invoiceInformationNonMilitaryEmailLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationNonMilitaryEmailLabel.TabIndex = 11;
+            this.invoiceInformationNonMilitaryEmailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationDescriptionOfRequestRichTextBox
+            // 
+            this.invoiceInformationDescriptionOfRequestRichTextBox.Location = new System.Drawing.Point(9, 376);
+            this.invoiceInformationDescriptionOfRequestRichTextBox.Name = "invoiceInformationDescriptionOfRequestRichTextBox";
+            this.invoiceInformationDescriptionOfRequestRichTextBox.ReadOnly = true;
+            this.invoiceInformationDescriptionOfRequestRichTextBox.Size = new System.Drawing.Size(347, 96);
+            this.invoiceInformationDescriptionOfRequestRichTextBox.TabIndex = 13;
+            this.invoiceInformationDescriptionOfRequestRichTextBox.Text = "";
+            // 
+            // invoiceInformationAnimalsLabel
+            // 
+            this.invoiceInformationAnimalsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationAnimalsLabel.Location = new System.Drawing.Point(143, 533);
+            this.invoiceInformationAnimalsLabel.Name = "invoiceInformationAnimalsLabel";
+            this.invoiceInformationAnimalsLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationAnimalsLabel.TabIndex = 16;
+            this.invoiceInformationAnimalsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationRequestTimeOfServiceLabel
+            // 
+            this.invoiceInformationRequestTimeOfServiceLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationRequestTimeOfServiceLabel.Location = new System.Drawing.Point(143, 479);
+            this.invoiceInformationRequestTimeOfServiceLabel.Name = "invoiceInformationRequestTimeOfServiceLabel";
+            this.invoiceInformationRequestTimeOfServiceLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationRequestTimeOfServiceLabel.TabIndex = 14;
+            this.invoiceInformationRequestTimeOfServiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // invoiceInformationPermissionToEnterLabel
+            // 
+            this.invoiceInformationPermissionToEnterLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.invoiceInformationPermissionToEnterLabel.Location = new System.Drawing.Point(143, 506);
+            this.invoiceInformationPermissionToEnterLabel.Name = "invoiceInformationPermissionToEnterLabel";
+            this.invoiceInformationPermissionToEnterLabel.Size = new System.Drawing.Size(213, 19);
+            this.invoiceInformationPermissionToEnterLabel.TabIndex = 15;
+            this.invoiceInformationPermissionToEnterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // printInvoiceButton
+            // 
+            this.printInvoiceButton.Location = new System.Drawing.Point(66, 564);
+            this.printInvoiceButton.Name = "printInvoiceButton";
+            this.printInvoiceButton.Size = new System.Drawing.Size(75, 23);
+            this.printInvoiceButton.TabIndex = 1000;
+            this.printInvoiceButton.Text = "Print Invoice";
+            this.printInvoiceButton.UseVisualStyleBackColor = true;
+            // 
+            // invoiceInformationCancelButton
+            // 
+            this.invoiceInformationCancelButton.Location = new System.Drawing.Point(207, 564);
+            this.invoiceInformationCancelButton.Name = "invoiceInformationCancelButton";
+            this.invoiceInformationCancelButton.Size = new System.Drawing.Size(75, 23);
+            this.invoiceInformationCancelButton.TabIndex = 1000;
+            this.invoiceInformationCancelButton.Text = "Cancel";
+            this.invoiceInformationCancelButton.UseVisualStyleBackColor = true;
             // 
             // InvoiceDatabaseForm
             // 
@@ -500,5 +720,25 @@
         private System.Windows.Forms.Label invoiceInformationWorkOrderTypeLabelPrompt;
         private System.Windows.Forms.Label invoiceInformationAnimalsLabelPrompt;
         private System.Windows.Forms.Label invoiceInformationPermissionToEnterLabelPrompt;
+        private System.Windows.Forms.Label invoiceInformationNonMilitaryEmailLabel;
+        private System.Windows.Forms.Label invoiceInformationPrimaryPhoneTypeLabel;
+        private System.Windows.Forms.Label invoiceInformationEmailLabel;
+        private System.Windows.Forms.Label invoiceInformationPrimaryPhoneExtensionLabel;
+        private System.Windows.Forms.Label invoiceInformationAlternatePhoneTypeLabel;
+        private System.Windows.Forms.Label invoiceInformationWorkOrderTypeLabel;
+        private System.Windows.Forms.Label invoiceInformationPrimaryPhoneNumberLabel;
+        private System.Windows.Forms.Label invoiceInformationAlternatePhoneExtensionLabel;
+        private System.Windows.Forms.Label invoiceInformationLastNameLabel;
+        private System.Windows.Forms.Label invoiceInformationFirstNameLabel;
+        private System.Windows.Forms.Label invoiceInformationAlternatePhoneNumberLabel;
+        private System.Windows.Forms.Label invoiceInformationCommunityLabel;
+        private System.Windows.Forms.Label invoiceInformationStreetAddressLabel;
+        private System.Windows.Forms.Label invoiceInformationCommunityLabelPrompt;
+        private System.Windows.Forms.RichTextBox invoiceInformationDescriptionOfRequestRichTextBox;
+        private System.Windows.Forms.Label invoiceInformationPermissionToEnterLabel;
+        private System.Windows.Forms.Label invoiceInformationRequestTimeOfServiceLabel;
+        private System.Windows.Forms.Label invoiceInformationAnimalsLabel;
+        private System.Windows.Forms.Button invoiceInformationCancelButton;
+        private System.Windows.Forms.Button printInvoiceButton;
     }
 }
