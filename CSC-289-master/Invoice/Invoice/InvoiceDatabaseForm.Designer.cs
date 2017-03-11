@@ -51,24 +51,21 @@
             this.invoicesListBox = new System.Windows.Forms.ListBox();
             this.invoiceInformationTab = new System.Windows.Forms.TabPage();
             this.invoiceInformationNonMilitaryEmailLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationEmailLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationDescriptionLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationPrimaryPhoneExtensionLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationAlternatePhoneTypeLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationWorkOrderTypeLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationAnimalsLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationPrimaryPhoneNumberLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationLastNameLabelPrompt = new System.Windows.Forms.Label();
+            this.invoiceInformationPermissionToEnterLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationFirstNameLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationAlternatePhoneNumberLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationStreetAddressLabelPrompt = new System.Windows.Forms.Label();
-            this.invoiceInformationLastNameLabelPrompt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.userInformationEntryTab.SuspendLayout();
             this.invoiceSelectionTab.SuspendLayout();
@@ -187,7 +184,7 @@
             this.userInformationEntryTab.Location = new System.Drawing.Point(4, 22);
             this.userInformationEntryTab.Name = "userInformationEntryTab";
             this.userInformationEntryTab.Padding = new System.Windows.Forms.Padding(3);
-            this.userInformationEntryTab.Size = new System.Drawing.Size(366, 248);
+            this.userInformationEntryTab.Size = new System.Drawing.Size(366, 596);
             this.userInformationEntryTab.TabIndex = 0;
             this.userInformationEntryTab.Text = "Enter Information";
             this.userInformationEntryTab.UseVisualStyleBackColor = true;
@@ -277,22 +274,19 @@
             // 
             // invoiceInformationTab
             // 
-            this.invoiceInformationTab.Controls.Add(this.label12);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationNonMilitaryEmailLabelPrompt);
-            this.invoiceInformationTab.Controls.Add(this.label11);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationRequestTimeOfServiceLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneTypeLabelPrompt);
-            this.invoiceInformationTab.Controls.Add(this.label10);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationEmailLabelPrompt);
-            this.invoiceInformationTab.Controls.Add(this.label9);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationDescriptionLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneExtensionLabelPrompt);
-            this.invoiceInformationTab.Controls.Add(this.label6);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneTypeLabelPrompt);
-            this.invoiceInformationTab.Controls.Add(this.label5);
-            this.invoiceInformationTab.Controls.Add(this.label2);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationWorkOrderTypeLabelPrompt);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationAnimalsLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationPrimaryPhoneNumberLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneExtensionLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationLastNameLabelPrompt);
-            this.invoiceInformationTab.Controls.Add(this.label1);
+            this.invoiceInformationTab.Controls.Add(this.invoiceInformationPermissionToEnterLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationFirstNameLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationAlternatePhoneNumberLabelPrompt);
             this.invoiceInformationTab.Controls.Add(this.invoiceInformationStreetAddressLabelPrompt);
@@ -313,6 +307,15 @@
             this.invoiceInformationNonMilitaryEmailLabelPrompt.TabIndex = 0;
             this.invoiceInformationNonMilitaryEmailLabelPrompt.Text = "Non-Military Email:";
             // 
+            // invoiceInformationRequestTimeOfServiceLabelPrompt
+            // 
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.AutoSize = true;
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Location = new System.Drawing.Point(3, 369);
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Name = "invoiceInformationRequestTimeOfServiceLabelPrompt";
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Size = new System.Drawing.Size(127, 13);
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.TabIndex = 0;
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Text = "Request Time of Service:";
+            // 
             // invoiceInformationPrimaryPhoneTypeLabelPrompt
             // 
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt.AutoSize = true;
@@ -330,6 +333,15 @@
             this.invoiceInformationEmailLabelPrompt.Size = new System.Drawing.Size(35, 13);
             this.invoiceInformationEmailLabelPrompt.TabIndex = 0;
             this.invoiceInformationEmailLabelPrompt.Text = "Email:";
+            // 
+            // invoiceInformationDescriptionLabelPrompt
+            // 
+            this.invoiceInformationDescriptionLabelPrompt.AutoSize = true;
+            this.invoiceInformationDescriptionLabelPrompt.Location = new System.Drawing.Point(3, 340);
+            this.invoiceInformationDescriptionLabelPrompt.Name = "invoiceInformationDescriptionLabelPrompt";
+            this.invoiceInformationDescriptionLabelPrompt.Size = new System.Drawing.Size(214, 13);
+            this.invoiceInformationDescriptionLabelPrompt.TabIndex = 0;
+            this.invoiceInformationDescriptionLabelPrompt.Text = "Description of Request (Including Location):";
             // 
             // invoiceInformationPrimaryPhoneExtensionLabelPrompt
             // 
@@ -349,6 +361,24 @@
             this.invoiceInformationAlternatePhoneTypeLabelPrompt.TabIndex = 0;
             this.invoiceInformationAlternatePhoneTypeLabelPrompt.Text = "Alternate Phone Type:";
             // 
+            // invoiceInformationWorkOrderTypeLabelPrompt
+            // 
+            this.invoiceInformationWorkOrderTypeLabelPrompt.AutoSize = true;
+            this.invoiceInformationWorkOrderTypeLabelPrompt.Location = new System.Drawing.Point(3, 311);
+            this.invoiceInformationWorkOrderTypeLabelPrompt.Name = "invoiceInformationWorkOrderTypeLabelPrompt";
+            this.invoiceInformationWorkOrderTypeLabelPrompt.Size = new System.Drawing.Size(89, 13);
+            this.invoiceInformationWorkOrderTypeLabelPrompt.TabIndex = 0;
+            this.invoiceInformationWorkOrderTypeLabelPrompt.Text = "Work Order Type";
+            // 
+            // invoiceInformationAnimalsLabelPrompt
+            // 
+            this.invoiceInformationAnimalsLabelPrompt.AutoSize = true;
+            this.invoiceInformationAnimalsLabelPrompt.Location = new System.Drawing.Point(4, 423);
+            this.invoiceInformationAnimalsLabelPrompt.Name = "invoiceInformationAnimalsLabelPrompt";
+            this.invoiceInformationAnimalsLabelPrompt.Size = new System.Drawing.Size(88, 13);
+            this.invoiceInformationAnimalsLabelPrompt.TabIndex = 0;
+            this.invoiceInformationAnimalsLabelPrompt.Text = "Animals in Home:";
+            // 
             // invoiceInformationPrimaryPhoneNumberLabelPrompt
             // 
             this.invoiceInformationPrimaryPhoneNumberLabelPrompt.AutoSize = true;
@@ -366,6 +396,24 @@
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Size = new System.Drawing.Size(135, 13);
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.TabIndex = 0;
             this.invoiceInformationAlternatePhoneExtensionLabelPrompt.Text = "Alternate Phone Extension:";
+            // 
+            // invoiceInformationLastNameLabelPrompt
+            // 
+            this.invoiceInformationLastNameLabelPrompt.AutoSize = true;
+            this.invoiceInformationLastNameLabelPrompt.Location = new System.Drawing.Point(3, 32);
+            this.invoiceInformationLastNameLabelPrompt.Name = "invoiceInformationLastNameLabelPrompt";
+            this.invoiceInformationLastNameLabelPrompt.Size = new System.Drawing.Size(61, 13);
+            this.invoiceInformationLastNameLabelPrompt.TabIndex = 0;
+            this.invoiceInformationLastNameLabelPrompt.Text = "Last Name:";
+            // 
+            // invoiceInformationPermissionToEnterLabelPrompt
+            // 
+            this.invoiceInformationPermissionToEnterLabelPrompt.AutoSize = true;
+            this.invoiceInformationPermissionToEnterLabelPrompt.Location = new System.Drawing.Point(4, 394);
+            this.invoiceInformationPermissionToEnterLabelPrompt.Name = "invoiceInformationPermissionToEnterLabelPrompt";
+            this.invoiceInformationPermissionToEnterLabelPrompt.Size = new System.Drawing.Size(130, 13);
+            this.invoiceInformationPermissionToEnterLabelPrompt.TabIndex = 0;
+            this.invoiceInformationPermissionToEnterLabelPrompt.Text = "Permission to Enter (PTE):";
             // 
             // invoiceInformationFirstNameLabelPrompt
             // 
@@ -393,87 +441,6 @@
             this.invoiceInformationStreetAddressLabelPrompt.Size = new System.Drawing.Size(79, 13);
             this.invoiceInformationStreetAddressLabelPrompt.TabIndex = 0;
             this.invoiceInformationStreetAddressLabelPrompt.Text = "Street Address:";
-            // 
-            // invoiceInformationLastNameLabelPrompt
-            // 
-            this.invoiceInformationLastNameLabelPrompt.AutoSize = true;
-            this.invoiceInformationLastNameLabelPrompt.Location = new System.Drawing.Point(3, 32);
-            this.invoiceInformationLastNameLabelPrompt.Name = "invoiceInformationLastNameLabelPrompt";
-            this.invoiceInformationLastNameLabelPrompt.Size = new System.Drawing.Size(61, 13);
-            this.invoiceInformationLastNameLabelPrompt.TabIndex = 0;
-            this.invoiceInformationLastNameLabelPrompt.Text = "Last Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 394);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Alternate Phone Number:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 423);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Alternate Phone Extension:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 311);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Work Order Type";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 452);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Alternate Phone Type:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 340);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Primary Phone Extension:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 481);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Email:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 369);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Primary Phone Type:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 510);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Non-Military Email:";
             // 
             // InvoiceDatabaseForm
             // 
@@ -528,13 +495,10 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ListBox invoicesListBox;
         private System.Windows.Forms.Label invoiceInformationLastNameLabelPrompt;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label invoiceInformationRequestTimeOfServiceLabelPrompt;
+        private System.Windows.Forms.Label invoiceInformationDescriptionLabelPrompt;
+        private System.Windows.Forms.Label invoiceInformationWorkOrderTypeLabelPrompt;
+        private System.Windows.Forms.Label invoiceInformationAnimalsLabelPrompt;
+        private System.Windows.Forms.Label invoiceInformationPermissionToEnterLabelPrompt;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Invoice
 {
-    public partial class UserDatabaseForm : Form
+    public partial class DatabaseForm : Form
     {
-        public UserDatabaseForm()
+        public DatabaseForm()
         {
             InitializeComponent();
         }

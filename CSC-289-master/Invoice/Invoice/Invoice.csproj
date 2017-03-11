@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseForm.Designer.cs">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceDatabaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,12 +79,9 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserDatabaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserDatabaseForm.Designer.cs">
-      <DependentUpon>UserDatabaseForm.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="DatabaseForm.resx">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InvoiceDatabaseForm.resx">
       <DependentUpon>InvoiceDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,9 +102,6 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserDatabaseForm.resx">
-      <DependentUpon>UserDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
