@@ -94,7 +94,7 @@
             this.newInvoiceButton.Location = new System.Drawing.Point(12, 588);
             this.newInvoiceButton.Name = "newInvoiceButton";
             this.newInvoiceButton.Size = new System.Drawing.Size(75, 23);
-            this.newInvoiceButton.TabIndex = 2;
+            this.newInvoiceButton.TabIndex = 1;
             this.newInvoiceButton.Text = "New";
             this.newInvoiceButton.UseVisualStyleBackColor = true;
             // 
@@ -112,7 +112,7 @@
             this.invoiceInformationCancelButton.Location = new System.Drawing.Point(201, 579);
             this.invoiceInformationCancelButton.Name = "invoiceInformationCancelButton";
             this.invoiceInformationCancelButton.Size = new System.Drawing.Size(75, 23);
-            this.invoiceInformationCancelButton.TabIndex = 1036;
+            this.invoiceInformationCancelButton.TabIndex = 3;
             this.invoiceInformationCancelButton.Text = "Cancel";
             this.invoiceInformationCancelButton.UseVisualStyleBackColor = true;
             // 
@@ -121,7 +121,7 @@
             this.printInvoiceButton.Location = new System.Drawing.Point(60, 579);
             this.printInvoiceButton.Name = "printInvoiceButton";
             this.printInvoiceButton.Size = new System.Drawing.Size(75, 23);
-            this.printInvoiceButton.TabIndex = 1035;
+            this.printInvoiceButton.TabIndex = 2;
             this.printInvoiceButton.Text = "Print Invoice";
             this.printInvoiceButton.UseVisualStyleBackColor = true;
             // 
