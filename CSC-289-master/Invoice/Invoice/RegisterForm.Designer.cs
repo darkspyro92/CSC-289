@@ -42,6 +42,8 @@
             this.backButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.registerHeaderLabel = new System.Windows.Forms.Label();
+            this.streetAddressLabelPrompt = new System.Windows.Forms.Label();
+            this.streetAddressTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstNamePromptLabel
@@ -74,7 +76,7 @@
             // passwordPromptLabel
             // 
             this.passwordPromptLabel.AutoSize = true;
-            this.passwordPromptLabel.Location = new System.Drawing.Point(50, 121);
+            this.passwordPromptLabel.Location = new System.Drawing.Point(50, 148);
             this.passwordPromptLabel.Name = "passwordPromptLabel";
             this.passwordPromptLabel.Size = new System.Drawing.Size(56, 13);
             this.passwordPromptLabel.TabIndex = 0;
@@ -83,7 +85,7 @@
             // confirmPasswordPromptLabel
             // 
             this.confirmPasswordPromptLabel.AutoSize = true;
-            this.confirmPasswordPromptLabel.Location = new System.Drawing.Point(12, 148);
+            this.confirmPasswordPromptLabel.Location = new System.Drawing.Point(12, 175);
             this.confirmPasswordPromptLabel.Name = "confirmPasswordPromptLabel";
             this.confirmPasswordPromptLabel.Size = new System.Drawing.Size(94, 13);
             this.confirmPasswordPromptLabel.TabIndex = 0;
@@ -112,7 +114,7 @@
             // 
             // passwordEntryTextBox
             // 
-            this.passwordEntryTextBox.Location = new System.Drawing.Point(111, 118);
+            this.passwordEntryTextBox.Location = new System.Drawing.Point(111, 145);
             this.passwordEntryTextBox.Name = "passwordEntryTextBox";
             this.passwordEntryTextBox.PasswordChar = '*';
             this.passwordEntryTextBox.Size = new System.Drawing.Size(161, 20);
@@ -121,7 +123,7 @@
             // 
             // confirmPasswordEntryTextBox
             // 
-            this.confirmPasswordEntryTextBox.Location = new System.Drawing.Point(111, 145);
+            this.confirmPasswordEntryTextBox.Location = new System.Drawing.Point(111, 172);
             this.confirmPasswordEntryTextBox.Name = "confirmPasswordEntryTextBox";
             this.confirmPasswordEntryTextBox.PasswordChar = '*';
             this.confirmPasswordEntryTextBox.Size = new System.Drawing.Size(161, 20);
@@ -130,7 +132,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(12, 177);
+            this.registerButton.Location = new System.Drawing.Point(15, 207);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 5;
@@ -140,7 +142,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(104, 177);
+            this.backButton.Location = new System.Drawing.Point(106, 207);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 6;
@@ -150,7 +152,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(196, 177);
+            this.cancelButton.Location = new System.Drawing.Point(197, 207);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 7;
@@ -167,22 +169,40 @@
             this.registerHeaderLabel.TabIndex = 3;
             this.registerHeaderLabel.Text = "Please enter the information requested below:";
             // 
+            // streetAddressLabelPrompt
+            // 
+            this.streetAddressLabelPrompt.AutoSize = true;
+            this.streetAddressLabelPrompt.Location = new System.Drawing.Point(26, 121);
+            this.streetAddressLabelPrompt.Name = "streetAddressLabelPrompt";
+            this.streetAddressLabelPrompt.Size = new System.Drawing.Size(79, 13);
+            this.streetAddressLabelPrompt.TabIndex = 0;
+            this.streetAddressLabelPrompt.Text = "Street Address:";
+            // 
+            // streetAddressTextBox
+            // 
+            this.streetAddressTextBox.Location = new System.Drawing.Point(111, 118);
+            this.streetAddressTextBox.Name = "streetAddressTextBox";
+            this.streetAddressTextBox.Size = new System.Drawing.Size(161, 20);
+            this.streetAddressTextBox.TabIndex = 2;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 215);
+            this.ClientSize = new System.Drawing.Size(284, 240);
             this.Controls.Add(this.registerHeaderLabel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.confirmPasswordEntryTextBox);
             this.Controls.Add(this.passwordEntryTextBox);
+            this.Controls.Add(this.streetAddressTextBox);
             this.Controls.Add(this.emailEntryTextBox);
             this.Controls.Add(this.lastNameEntryTextBox);
             this.Controls.Add(this.firstNameEntryTextBox);
             this.Controls.Add(this.confirmPasswordPromptLabel);
             this.Controls.Add(this.passwordPromptLabel);
+            this.Controls.Add(this.streetAddressLabelPrompt);
             this.Controls.Add(this.s);
             this.Controls.Add(this.lastNameLabelPrompt);
             this.Controls.Add(this.firstNamePromptLabel);
@@ -209,5 +229,7 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label registerHeaderLabel;
+        private System.Windows.Forms.Label streetAddressLabelPrompt;
+        private System.Windows.Forms.TextBox streetAddressTextBox;
     }
 }
