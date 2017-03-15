@@ -82,6 +82,9 @@ namespace Invoice
                 if (table.Rows.Count > 0)
                 {
                     MessageBox.Show("Login Successful!");
+                    InvoiceDatabaseForm invoice = new InvoiceDatabaseForm();
+                    invoice.Show();
+                    
 
                 }
                 else

@@ -31,6 +31,18 @@ C:\Users\renzi\Downloads\CSC-289-master (1)\CSC-289-master\CSC-289-master\CSC-28
 C:\Users\renzi\Downloads\CSC-289-master (1)\CSC-289-master\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.Properties.Resources.resources
 C:\Users\renzi\Downloads\CSC-289-master (1)\CSC-289-master\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.RegisterForm.resources
 C:\Users\renzi\Downloads\CSC-289-master (1)\CSC-289-master\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.csproj.GenerateResource.Cache
-C:\Users\weilandr0843\Source\Repos\CSC-289\CSC-289-master\Invoice\Invoice\bin\Debug\Invoice.exe.config
-C:\Users\weilandr0843\Source\Repos\CSC-289\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.exe
-C:\Users\weilandr0843\Source\Repos\CSC-289\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.pdb
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\bin\Debug\Invoice.exe.config
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.exe
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.pdb
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\bin\Debug\Invoice.exe
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\bin\Debug\Invoice.pdb
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\bin\Debug\MySql.Data.dll
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\bin\Debug\MySql.Data.xml
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.csprojResolveAssemblyReference.cache
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.DatabaseForm.resources
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.InvoiceDatabaseForm.resources
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.LoginForm.resources
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.NewInvoiceForm.resources
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.Properties.Resources.resources
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.RegisterForm.resources
+C:\Users\renzi\Downloads\CSC-289-master (5)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\Invoice.csproj.GenerateResource.Cache
