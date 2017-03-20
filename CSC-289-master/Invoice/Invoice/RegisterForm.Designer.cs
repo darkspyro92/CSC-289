@@ -42,6 +42,11 @@
             this.backButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.registerHeaderLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.occupantRadioButton = new System.Windows.Forms.RadioButton();
+            this.contractorRadioButton = new System.Windows.Forms.RadioButton();
+            this.officeWorkerRadioButton = new System.Windows.Forms.RadioButton();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstNamePromptLabel
@@ -130,7 +135,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(12, 177);
+            this.registerButton.Location = new System.Drawing.Point(12, 224);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 5;
@@ -140,7 +145,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(104, 177);
+            this.backButton.Location = new System.Drawing.Point(111, 224);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 6;
@@ -150,7 +155,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(196, 177);
+            this.cancelButton.Location = new System.Drawing.Point(197, 224);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 7;
@@ -167,11 +172,55 @@
             this.registerHeaderLabel.TabIndex = 3;
             this.registerHeaderLabel.Text = "Please enter the information requested below:";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.occupantRadioButton);
+            this.panel1.Controls.Add(this.contractorRadioButton);
+            this.panel1.Controls.Add(this.officeWorkerRadioButton);
+            this.panel1.Location = new System.Drawing.Point(15, 185);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(257, 24);
+            this.panel1.TabIndex = 12;
+            // 
+            // occupantRadioButton
+            // 
+            this.occupantRadioButton.AutoSize = true;
+            this.occupantRadioButton.Location = new System.Drawing.Point(3, 4);
+            this.occupantRadioButton.Name = "occupantRadioButton";
+            this.occupantRadioButton.Size = new System.Drawing.Size(72, 17);
+            this.occupantRadioButton.TabIndex = 8;
+            this.occupantRadioButton.TabStop = true;
+            this.occupantRadioButton.Text = "Occupant";
+            this.occupantRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // contractorRadioButton
+            // 
+            this.contractorRadioButton.AutoSize = true;
+            this.contractorRadioButton.Location = new System.Drawing.Point(178, 4);
+            this.contractorRadioButton.Name = "contractorRadioButton";
+            this.contractorRadioButton.Size = new System.Drawing.Size(74, 17);
+            this.contractorRadioButton.TabIndex = 10;
+            this.contractorRadioButton.TabStop = true;
+            this.contractorRadioButton.Text = "Contractor";
+            this.contractorRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // officeWorkerRadioButton
+            // 
+            this.officeWorkerRadioButton.AutoSize = true;
+            this.officeWorkerRadioButton.Location = new System.Drawing.Point(81, 4);
+            this.officeWorkerRadioButton.Name = "officeWorkerRadioButton";
+            this.officeWorkerRadioButton.Size = new System.Drawing.Size(91, 17);
+            this.officeWorkerRadioButton.TabIndex = 9;
+            this.officeWorkerRadioButton.TabStop = true;
+            this.officeWorkerRadioButton.Text = "Office Worker";
+            this.officeWorkerRadioButton.UseVisualStyleBackColor = true;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 215);
+            this.ClientSize = new System.Drawing.Size(284, 263);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.registerHeaderLabel);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.backButton);
@@ -188,6 +237,9 @@
             this.Controls.Add(this.firstNamePromptLabel);
             this.Name = "RegisterForm";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +261,9 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label registerHeaderLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton occupantRadioButton;
+        private System.Windows.Forms.RadioButton contractorRadioButton;
+        private System.Windows.Forms.RadioButton officeWorkerRadioButton;
     }
 }

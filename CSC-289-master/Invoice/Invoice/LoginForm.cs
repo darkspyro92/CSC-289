@@ -41,6 +41,8 @@ namespace Invoice
          */
         private void loginButton_Click(object sender, EventArgs e)
         {
+            string confirmed; // will be used to store the result when we check whether the user's account has been confirmed by the admin or not
+            string usertype; // will be used to hold the user's account type
             /**
              * If the email field is empty then a tooltip informs you that you need to enter an email address. 
              */
@@ -68,8 +70,8 @@ namespace Invoice
                 /**
                  * MySQLCommand that will be used to query the database using the entered email and password
                  */
-                MySqlCommand command = new MySqlCommand("Select email, password from User where email='" + emailEntryTextBox.Text.ToLower() + "'and password='" + passwordEntryTextBox.Text + "'", connection);
-
+                MySqlCommand command = new MySqlCommand("Select email, password, usertype, confirmed from User where email='" + emailEntryTextBox.Text.ToLower() + "'and password='" + passwordEntryTextBox.Text + "'", connection);
+              
                 /**
                  *  Fill the DataTable with results from the query. 
                  *  If the table has at least one row then that means the login information entered was that of a registered user and login was successful.
@@ -81,11 +83,37 @@ namespace Invoice
                 data.Fill(table);
                 if (table.Rows.Count > 0)
                 {
-                    MessageBox.Show("Login Successful!");
-                    InvoiceDatabaseForm invoice = new InvoiceDatabaseForm();
-                    invoice.Show();
                     
+                    usertype = table.Rows[0]["usertype"].ToString(); // Store the usertype item from your dataTable into the usertype variable
+                    confirmed = table.Rows[0]["confirmed"].ToString(); // store the confirmed item from your dataTable
+                    /**
+                     * Checks to see if the administrator has confirmed the account and if not then inform the user that it has yet to be confirmed/activated
+                     */
+                    if(confirmed == "False")
+                    {
+                        MessageBox.Show("Your account has not been confirmed by the adminstrator yet");
+                    }
+                    /**
+                     * If the adminstrator has confirmed the user's account then next the usertype is checked to determine which form the user should see. 
+                     * For now the occupant, contractor and office worker all see the same form but eventually all three will have different level's of access. 
+                     */
+                    else if(confirmed == "True")
+                    {
+                        if (usertype == "Occupant" || usertype == "Contractor" || usertype == "Office Worker" )
+                        {
+                            MessageBox.Show("Login Successful!");
+                            InvoiceDatabaseForm invoice = new InvoiceDatabaseForm();
+                            invoice.Show();
+                        }
+                        else if (usertype == "Administrator")
+                        {
+                            MessageBox.Show("Login Successful!");
+                            AdminForm invoice = new AdminForm();
+                            invoice.Show();
+                        }
 
+                    }
+                    
                 }
                 else
                 {

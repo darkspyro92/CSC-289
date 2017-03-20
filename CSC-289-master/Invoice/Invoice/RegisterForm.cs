@@ -26,6 +26,11 @@ namespace Invoice
 
         private void registerButton_Click(object sender, EventArgs e)
         {
+            RadioButton[] rb = new RadioButton[] { occupantRadioButton, officeWorkerRadioButton, contractorRadioButton };
+
+            var checkedButton = panel1.Controls.OfType<RadioButton>()
+                                      .FirstOrDefault(r => r.Checked);
+
             /**
              * 1) emailCheck is the regular expression for our email field. 
              * 2) passwordCheck is the regular expression for our password field. Youa are required to have a password that is at minimum 6 characters long with at least one lowercase letter, one uppercase letter, and one number.  
@@ -36,13 +41,13 @@ namespace Invoice
             /**
              * Checks the email & password using the RegularExpressions from above, confirms that your entered password matches what you entered when asked to confirm it, and checks that the email you entered has not been used previously. 
              * */
-            if (Regex.IsMatch(emailEntryTextBox.Text, emailCheck) && Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck) && passwordEntryTextBox.Text == confirmPasswordEntryTextBox.Text && emailAvailable())
+            if (Regex.IsMatch(emailEntryTextBox.Text, emailCheck) && Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck) && passwordEntryTextBox.Text == confirmPasswordEntryTextBox.Text && emailAvailable() && rb.Any(radio => radio.Checked))
             {
 
                 /**
-                 *  MySQLCommand that will be used to insert the entered first name, last name, email and password into the User table into the invoicelogin database. 
+                 *  MySQLCommand that will be used to insert the entered first name, last name, email, password, and usertype into the User table into the invoicelogin database. 
                  */
-                MySqlCommand cmd = new MySqlCommand("insert into User values ('" + firstNameEntryTextBox.Text + "', '" + lastNameEntryTextBox.Text + "', '" + emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "')", connection);
+                MySqlCommand cmd = new MySqlCommand("insert into User values ('" + 0 + "', '" + firstNameEntryTextBox.Text + "', '" + lastNameEntryTextBox.Text + "', '" + emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "', '" + checkedButton.Text + "', '" + 0 + "')", connection);
 
                 /**
                  * Opens a connection to the MySQL Database 
@@ -71,14 +76,14 @@ namespace Invoice
             /**
              * If the password that was entered does not meet our requirements then a MessageBox will inform you that you entered password does not meet the requirements
              */
-            else if(!Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck))
+            else if (!Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck))
             {
                 MessageBox.Show("Password does not meet all requirements \n 1) Password Must Be At Minimum 6 Characters\n 2) Password Must Contain At Least One Uppercase Letter\n 3) Password Must Contain At Least One Lowercase Letter\n 4) Password Must Contain At Least One Number");
             }
             /**
              * If the passwords that were entered in the password & confirm password texboxes don't match then a MessageBox will inform you that the passwords do not match.  
              */
-            else if(passwordEntryTextBox.Text != confirmPasswordEntryTextBox.Text)
+            else if (passwordEntryTextBox.Text != confirmPasswordEntryTextBox.Text)
             {
                 MessageBox.Show("Passwords Do Not Match");
                 passwordEntryTextBox.Clear();
@@ -92,7 +97,14 @@ namespace Invoice
             {
                 MessageBox.Show("Email already in use");
             }
-                    
+            /**
+             * If the registering user hasn't selected a user type then they are informed via a message box that they have to select one.
+             */
+            else if (!rb.Any(radio => radio.Checked))
+            {
+                MessageBox.Show("No User Type Selected");
+            }
+
         }
 
         /**
@@ -108,9 +120,9 @@ namespace Invoice
             DataTable table = new DataTable();
 
             data.Fill(table);
-            if(table.Rows.Count > 0)
+            if (table.Rows.Count > 0)
             {
-               available = false;
+                available = false;
             }
             else
             {
@@ -125,7 +137,8 @@ namespace Invoice
          */
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            AdminForm test = new AdminForm();
+            test.Show();
         }
 
         /**
@@ -136,6 +149,11 @@ namespace Invoice
             this.Close();
             LoginForm login = new LoginForm();
             login.Show();
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
