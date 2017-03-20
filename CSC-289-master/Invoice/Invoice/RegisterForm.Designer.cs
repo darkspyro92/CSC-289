@@ -30,7 +30,7 @@
         {
             this.firstNamePromptLabel = new System.Windows.Forms.Label();
             this.lastNameLabelPrompt = new System.Windows.Forms.Label();
-            this.s = new System.Windows.Forms.Label();
+            this.emailLabelPrompt = new System.Windows.Forms.Label();
             this.passwordPromptLabel = new System.Windows.Forms.Label();
             this.confirmPasswordPromptLabel = new System.Windows.Forms.Label();
             this.firstNameEntryTextBox = new System.Windows.Forms.TextBox();
@@ -46,6 +46,8 @@
             this.occupantRadioButton = new System.Windows.Forms.RadioButton();
             this.contractorRadioButton = new System.Windows.Forms.RadioButton();
             this.officeWorkerRadioButton = new System.Windows.Forms.RadioButton();
+            this.addressLabelPrompt = new System.Windows.Forms.Label();
+            this.addressEntryTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,25 +63,25 @@
             // lastNameLabelPrompt
             // 
             this.lastNameLabelPrompt.AutoSize = true;
-            this.lastNameLabelPrompt.Location = new System.Drawing.Point(45, 67);
+            this.lastNameLabelPrompt.Location = new System.Drawing.Point(45, 66);
             this.lastNameLabelPrompt.Name = "lastNameLabelPrompt";
             this.lastNameLabelPrompt.Size = new System.Drawing.Size(61, 13);
             this.lastNameLabelPrompt.TabIndex = 0;
             this.lastNameLabelPrompt.Text = "Last Name:";
             // 
-            // s
+            // emailLabelPrompt
             // 
-            this.s.AutoSize = true;
-            this.s.Location = new System.Drawing.Point(70, 94);
-            this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(35, 13);
-            this.s.TabIndex = 0;
-            this.s.Text = "Email:";
+            this.emailLabelPrompt.AutoSize = true;
+            this.emailLabelPrompt.Location = new System.Drawing.Point(70, 92);
+            this.emailLabelPrompt.Name = "emailLabelPrompt";
+            this.emailLabelPrompt.Size = new System.Drawing.Size(35, 13);
+            this.emailLabelPrompt.TabIndex = 0;
+            this.emailLabelPrompt.Text = "Email:";
             // 
             // passwordPromptLabel
             // 
             this.passwordPromptLabel.AutoSize = true;
-            this.passwordPromptLabel.Location = new System.Drawing.Point(50, 121);
+            this.passwordPromptLabel.Location = new System.Drawing.Point(50, 144);
             this.passwordPromptLabel.Name = "passwordPromptLabel";
             this.passwordPromptLabel.Size = new System.Drawing.Size(56, 13);
             this.passwordPromptLabel.TabIndex = 0;
@@ -88,7 +90,7 @@
             // confirmPasswordPromptLabel
             // 
             this.confirmPasswordPromptLabel.AutoSize = true;
-            this.confirmPasswordPromptLabel.Location = new System.Drawing.Point(12, 148);
+            this.confirmPasswordPromptLabel.Location = new System.Drawing.Point(12, 170);
             this.confirmPasswordPromptLabel.Name = "confirmPasswordPromptLabel";
             this.confirmPasswordPromptLabel.Size = new System.Drawing.Size(94, 13);
             this.confirmPasswordPromptLabel.TabIndex = 0;
@@ -103,21 +105,21 @@
             // 
             // lastNameEntryTextBox
             // 
-            this.lastNameEntryTextBox.Location = new System.Drawing.Point(111, 64);
+            this.lastNameEntryTextBox.Location = new System.Drawing.Point(111, 63);
             this.lastNameEntryTextBox.Name = "lastNameEntryTextBox";
             this.lastNameEntryTextBox.Size = new System.Drawing.Size(161, 20);
             this.lastNameEntryTextBox.TabIndex = 1;
             // 
             // emailEntryTextBox
             // 
-            this.emailEntryTextBox.Location = new System.Drawing.Point(111, 91);
+            this.emailEntryTextBox.Location = new System.Drawing.Point(111, 89);
             this.emailEntryTextBox.Name = "emailEntryTextBox";
             this.emailEntryTextBox.Size = new System.Drawing.Size(161, 20);
             this.emailEntryTextBox.TabIndex = 2;
             // 
             // passwordEntryTextBox
             // 
-            this.passwordEntryTextBox.Location = new System.Drawing.Point(111, 118);
+            this.passwordEntryTextBox.Location = new System.Drawing.Point(111, 141);
             this.passwordEntryTextBox.Name = "passwordEntryTextBox";
             this.passwordEntryTextBox.PasswordChar = '*';
             this.passwordEntryTextBox.Size = new System.Drawing.Size(161, 20);
@@ -126,7 +128,7 @@
             // 
             // confirmPasswordEntryTextBox
             // 
-            this.confirmPasswordEntryTextBox.Location = new System.Drawing.Point(111, 145);
+            this.confirmPasswordEntryTextBox.Location = new System.Drawing.Point(111, 167);
             this.confirmPasswordEntryTextBox.Name = "confirmPasswordEntryTextBox";
             this.confirmPasswordEntryTextBox.PasswordChar = '*';
             this.confirmPasswordEntryTextBox.Size = new System.Drawing.Size(161, 20);
@@ -135,7 +137,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(12, 224);
+            this.registerButton.Location = new System.Drawing.Point(15, 241);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 5;
@@ -145,7 +147,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(111, 224);
+            this.backButton.Location = new System.Drawing.Point(106, 241);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(75, 23);
             this.backButton.TabIndex = 6;
@@ -155,7 +157,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(197, 224);
+            this.cancelButton.Location = new System.Drawing.Point(197, 241);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 7;
@@ -177,7 +179,7 @@
             this.panel1.Controls.Add(this.occupantRadioButton);
             this.panel1.Controls.Add(this.contractorRadioButton);
             this.panel1.Controls.Add(this.officeWorkerRadioButton);
-            this.panel1.Location = new System.Drawing.Point(15, 185);
+            this.panel1.Location = new System.Drawing.Point(15, 202);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 24);
             this.panel1.TabIndex = 12;
@@ -215,11 +217,27 @@
             this.officeWorkerRadioButton.Text = "Office Worker";
             this.officeWorkerRadioButton.UseVisualStyleBackColor = true;
             // 
+            // addressLabelPrompt
+            // 
+            this.addressLabelPrompt.AutoSize = true;
+            this.addressLabelPrompt.Location = new System.Drawing.Point(58, 118);
+            this.addressLabelPrompt.Name = "addressLabelPrompt";
+            this.addressLabelPrompt.Size = new System.Drawing.Size(48, 13);
+            this.addressLabelPrompt.TabIndex = 0;
+            this.addressLabelPrompt.Text = "Address:";
+            // 
+            // addressEntryTextBox
+            // 
+            this.addressEntryTextBox.Location = new System.Drawing.Point(111, 115);
+            this.addressEntryTextBox.Name = "addressEntryTextBox";
+            this.addressEntryTextBox.Size = new System.Drawing.Size(161, 20);
+            this.addressEntryTextBox.TabIndex = 2;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 263);
+            this.ClientSize = new System.Drawing.Size(284, 282);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.registerHeaderLabel);
             this.Controls.Add(this.cancelButton);
@@ -227,12 +245,14 @@
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.confirmPasswordEntryTextBox);
             this.Controls.Add(this.passwordEntryTextBox);
+            this.Controls.Add(this.addressEntryTextBox);
             this.Controls.Add(this.emailEntryTextBox);
             this.Controls.Add(this.lastNameEntryTextBox);
             this.Controls.Add(this.firstNameEntryTextBox);
             this.Controls.Add(this.confirmPasswordPromptLabel);
+            this.Controls.Add(this.addressLabelPrompt);
             this.Controls.Add(this.passwordPromptLabel);
-            this.Controls.Add(this.s);
+            this.Controls.Add(this.emailLabelPrompt);
             this.Controls.Add(this.lastNameLabelPrompt);
             this.Controls.Add(this.firstNamePromptLabel);
             this.Name = "RegisterForm";
@@ -249,7 +269,7 @@
 
         private System.Windows.Forms.Label firstNamePromptLabel;
         private System.Windows.Forms.Label lastNameLabelPrompt;
-        private System.Windows.Forms.Label s;
+        private System.Windows.Forms.Label emailLabelPrompt;
         private System.Windows.Forms.Label passwordPromptLabel;
         private System.Windows.Forms.Label confirmPasswordPromptLabel;
         private System.Windows.Forms.TextBox firstNameEntryTextBox;
@@ -265,5 +285,7 @@
         private System.Windows.Forms.RadioButton occupantRadioButton;
         private System.Windows.Forms.RadioButton contractorRadioButton;
         private System.Windows.Forms.RadioButton officeWorkerRadioButton;
+        private System.Windows.Forms.Label addressLabelPrompt;
+        private System.Windows.Forms.TextBox addressEntryTextBox;
     }
 }
