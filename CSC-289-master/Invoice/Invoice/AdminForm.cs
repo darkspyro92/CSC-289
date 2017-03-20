@@ -40,7 +40,6 @@ namespace Invoice
                 }
             }
             data = data.TrimEnd(',');
-            MessageBox.Show(data);
             string updatesql = "UPDATE User SET confirmed=1 WHERE id in (" + data + ")";
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(updatesql, connection);

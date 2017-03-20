@@ -137,8 +137,7 @@ namespace Invoice
          */
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            AdminForm test = new AdminForm();
-            test.Show();
+            Application.Exit();
         }
 
         /**

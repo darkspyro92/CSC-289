@@ -37,11 +37,6 @@
             this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.abcaba5_invoiceloginDataSet2 = new Invoice.abcaba5_invoiceloginDataSet2();
-            this.userTableAdapter1 = new Invoice.abcaba5_invoiceloginDataSet2TableAdapters.UserTableAdapter();
-            this.showUnconfirmedAccountsButton = new System.Windows.Forms.Button();
-            this.showAllAccountsButton = new System.Windows.Forms.Button();
             this.selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +45,11 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.abcaba5_invoiceloginDataSet2 = new Invoice.abcaba5_invoiceloginDataSet2();
+            this.userTableAdapter1 = new Invoice.abcaba5_invoiceloginDataSet2TableAdapters.UserTableAdapter();
+            this.showUnconfirmedAccountsButton = new System.Windows.Forms.Button();
+            this.showAllAccountsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abcaba5invoiceloginDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource3)).BeginInit();
@@ -106,11 +106,57 @@
             this.usertypeDataGridViewTextBoxColumn,
             this.confirmedDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.userBindingSource5;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(843, 192);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // selected
+            // 
+            this.selected.HeaderText = "Selected";
+            this.selected.Name = "selected";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // usertypeDataGridViewTextBoxColumn
+            // 
+            this.usertypeDataGridViewTextBoxColumn.DataPropertyName = "usertype";
+            this.usertypeDataGridViewTextBoxColumn.HeaderText = "usertype";
+            this.usertypeDataGridViewTextBoxColumn.Name = "usertypeDataGridViewTextBoxColumn";
+            // 
+            // confirmedDataGridViewCheckBoxColumn
+            // 
+            this.confirmedDataGridViewCheckBoxColumn.DataPropertyName = "confirmed";
+            this.confirmedDataGridViewCheckBoxColumn.HeaderText = "confirmed";
+            this.confirmedDataGridViewCheckBoxColumn.Name = "confirmedDataGridViewCheckBoxColumn";
             // 
             // userBindingSource5
             // 
@@ -145,61 +191,6 @@
             this.showAllAccountsButton.Text = "Show All Accounts";
             this.showAllAccountsButton.UseVisualStyleBackColor = true;
             this.showAllAccountsButton.Click += new System.EventHandler(this.showAllAccountsButton_Click);
-            // 
-            // selected
-            // 
-            this.selected.HeaderText = "Selected";
-            this.selected.Name = "selected";
-            this.selected.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usertypeDataGridViewTextBoxColumn
-            // 
-            this.usertypeDataGridViewTextBoxColumn.DataPropertyName = "usertype";
-            this.usertypeDataGridViewTextBoxColumn.HeaderText = "usertype";
-            this.usertypeDataGridViewTextBoxColumn.Name = "usertypeDataGridViewTextBoxColumn";
-            this.usertypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // confirmedDataGridViewCheckBoxColumn
-            // 
-            this.confirmedDataGridViewCheckBoxColumn.DataPropertyName = "confirmed";
-            this.confirmedDataGridViewCheckBoxColumn.HeaderText = "confirmed";
-            this.confirmedDataGridViewCheckBoxColumn.Name = "confirmedDataGridViewCheckBoxColumn";
-            this.confirmedDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // AdminForm
             // 
