@@ -607,10 +607,10 @@
   <xs:element name="ProjectDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProjectDBDataSet" msprop:Generator_UserDSName="ProjectDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Community" msprop:Generator_TableClassName="CommunityDataTable" msprop:Generator_TableVarName="tableCommunity" msprop:Generator_RowChangedName="CommunityRowChanged" msprop:Generator_TablePropName="Community" msprop:Generator_RowDeletingName="CommunityRowDeleting" msprop:Generator_RowChangingName="CommunityRowChanging" msprop:Generator_RowEvHandlerName="CommunityRowChangeEventHandler" msprop:Generator_RowDeletedName="CommunityRowDeleted" msprop:Generator_RowClassName="CommunityRow" msprop:Generator_UserTableName="Community" msprop:Generator_RowEvArgName="CommunityRowChangeEvent">
+        <xs:element name="Community" msprop:Generator_TableClassName="CommunityDataTable" msprop:Generator_TableVarName="tableCommunity" msprop:Generator_TablePropName="Community" msprop:Generator_RowDeletingName="CommunityRowDeleting" msprop:Generator_RowChangingName="CommunityRowChanging" msprop:Generator_RowEvHandlerName="CommunityRowChangeEventHandler" msprop:Generator_RowDeletedName="CommunityRowDeleted" msprop:Generator_UserTableName="Community" msprop:Generator_RowChangedName="CommunityRowChanged" msprop:Generator_RowEvArgName="CommunityRowChangeEvent" msprop:Generator_RowClassName="CommunityRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Community_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCommunity_ID" msprop:Generator_ColumnPropNameInRow="Community_ID" msprop:Generator_ColumnPropNameInTable="Community_IDColumn" msprop:Generator_UserColumnName="Community_ID" type="xs:int" />
+              <xs:element name="Community_ID" msprop:Generator_ColumnVarNameInTable="columnCommunity_ID" msprop:Generator_ColumnPropNameInRow="Community_ID" msprop:Generator_ColumnPropNameInTable="Community_IDColumn" msprop:Generator_UserColumnName="Community_ID" type="xs:int" />
               <xs:element name="Community_Name" msprop:Generator_ColumnVarNameInTable="columnCommunity_Name" msprop:Generator_ColumnPropNameInRow="Community_Name" msprop:Generator_ColumnPropNameInTable="Community_NameColumn" msprop:Generator_UserColumnName="Community_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -621,10 +621,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Contractor" msprop:Generator_TableClassName="ContractorDataTable" msprop:Generator_TableVarName="tableContractor" msprop:Generator_RowChangedName="ContractorRowChanged" msprop:Generator_TablePropName="Contractor" msprop:Generator_RowDeletingName="ContractorRowDeleting" msprop:Generator_RowChangingName="ContractorRowChanging" msprop:Generator_RowEvHandlerName="ContractorRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractorRowDeleted" msprop:Generator_RowClassName="ContractorRow" msprop:Generator_UserTableName="Contractor" msprop:Generator_RowEvArgName="ContractorRowChangeEvent">
+        <xs:element name="Contractor" msprop:Generator_TableClassName="ContractorDataTable" msprop:Generator_TableVarName="tableContractor" msprop:Generator_TablePropName="Contractor" msprop:Generator_RowDeletingName="ContractorRowDeleting" msprop:Generator_RowChangingName="ContractorRowChanging" msprop:Generator_RowEvHandlerName="ContractorRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractorRowDeleted" msprop:Generator_UserTableName="Contractor" msprop:Generator_RowChangedName="ContractorRowChanged" msprop:Generator_RowEvArgName="ContractorRowChangeEvent" msprop:Generator_RowClassName="ContractorRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Contractor_ID" msprop:Generator_ColumnVarNameInTable="columnContractor_ID" msprop:Generator_ColumnPropNameInRow="Contractor_ID" msprop:Generator_ColumnPropNameInTable="Contractor_IDColumn" msprop:Generator_UserColumnName="Contractor_ID" type="xs:short" />
+              <xs:element name="Contractor_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnContractor_ID" msprop:Generator_ColumnPropNameInRow="Contractor_ID" msprop:Generator_ColumnPropNameInTable="Contractor_IDColumn" msprop:Generator_UserColumnName="Contractor_ID" type="xs:short" />
               <xs:element name="Company_ID" msprop:Generator_ColumnVarNameInTable="columnCompany_ID" msprop:Generator_ColumnPropNameInRow="Company_ID" msprop:Generator_ColumnPropNameInTable="Company_IDColumn" msprop:Generator_UserColumnName="Company_ID" type="xs:int" minOccurs="0" />
               <xs:element name="First" msprop:Generator_ColumnVarNameInTable="columnFirst" msprop:Generator_ColumnPropNameInRow="First" msprop:Generator_ColumnPropNameInTable="FirstColumn" msprop:Generator_UserColumnName="First" minOccurs="0">
                 <xs:simpleType>
@@ -651,10 +651,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ContractorCompany" msprop:Generator_TableClassName="ContractorCompanyDataTable" msprop:Generator_TableVarName="tableContractorCompany" msprop:Generator_RowChangedName="ContractorCompanyRowChanged" msprop:Generator_TablePropName="ContractorCompany" msprop:Generator_RowDeletingName="ContractorCompanyRowDeleting" msprop:Generator_RowChangingName="ContractorCompanyRowChanging" msprop:Generator_RowEvHandlerName="ContractorCompanyRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractorCompanyRowDeleted" msprop:Generator_RowClassName="ContractorCompanyRow" msprop:Generator_UserTableName="ContractorCompany" msprop:Generator_RowEvArgName="ContractorCompanyRowChangeEvent">
+        <xs:element name="ContractorCompany" msprop:Generator_TableClassName="ContractorCompanyDataTable" msprop:Generator_TableVarName="tableContractorCompany" msprop:Generator_TablePropName="ContractorCompany" msprop:Generator_RowDeletingName="ContractorCompanyRowDeleting" msprop:Generator_RowChangingName="ContractorCompanyRowChanging" msprop:Generator_RowEvHandlerName="ContractorCompanyRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractorCompanyRowDeleted" msprop:Generator_UserTableName="ContractorCompany" msprop:Generator_RowChangedName="ContractorCompanyRowChanged" msprop:Generator_RowEvArgName="ContractorCompanyRowChangeEvent" msprop:Generator_RowClassName="ContractorCompanyRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Company_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCompany_ID" msprop:Generator_ColumnPropNameInRow="Company_ID" msprop:Generator_ColumnPropNameInTable="Company_IDColumn" msprop:Generator_UserColumnName="Company_ID" type="xs:int" />
+              <xs:element name="Company_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnCompany_ID" msprop:Generator_ColumnPropNameInRow="Company_ID" msprop:Generator_ColumnPropNameInTable="Company_IDColumn" msprop:Generator_UserColumnName="Company_ID" type="xs:int" />
               <xs:element name="Invoice_ID" msprop:Generator_ColumnVarNameInTable="columnInvoice_ID" msprop:Generator_ColumnPropNameInRow="Invoice_ID" msprop:Generator_ColumnPropNameInTable="Invoice_IDColumn" msprop:Generator_UserColumnName="Invoice_ID" type="xs:int" minOccurs="0" />
               <xs:element name="Company_Name" msprop:Generator_ColumnVarNameInTable="columnCompany_Name" msprop:Generator_ColumnPropNameInRow="Company_Name" msprop:Generator_ColumnPropNameInTable="Company_NameColumn" msprop:Generator_UserColumnName="Company_Name" minOccurs="0">
                 <xs:simpleType>
@@ -681,10 +681,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_RowClassName="CustomerRow" msprop:Generator_UserTableName="Customer" msprop:Generator_RowEvArgName="CustomerRowChangeEvent">
+        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_UserTableName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_RowClassName="CustomerRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Customer_ID" msprop:Generator_ColumnVarNameInTable="columnCustomer_ID" msprop:Generator_ColumnPropNameInRow="Customer_ID" msprop:Generator_ColumnPropNameInTable="Customer_IDColumn" msprop:Generator_UserColumnName="Customer_ID" type="xs:short" />
+              <xs:element name="Customer_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnCustomer_ID" msprop:Generator_ColumnPropNameInRow="Customer_ID" msprop:Generator_ColumnPropNameInTable="Customer_IDColumn" msprop:Generator_UserColumnName="Customer_ID" type="xs:short" />
               <xs:element name="Community_Name" msprop:Generator_ColumnVarNameInTable="columnCommunity_Name" msprop:Generator_ColumnPropNameInRow="Community_Name" msprop:Generator_ColumnPropNameInTable="Community_NameColumn" msprop:Generator_UserColumnName="Community_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -692,7 +692,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Invoice_ID" msprop:Generator_ColumnVarNameInTable="columnInvoice_ID" msprop:Generator_ColumnPropNameInRow="Invoice_ID" msprop:Generator_ColumnPropNameInTable="Invoice_IDColumn" msprop:Generator_UserColumnName="Invoice_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="Invoice_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnInvoice_ID" msprop:Generator_ColumnPropNameInRow="Invoice_ID" msprop:Generator_ColumnPropNameInTable="Invoice_IDColumn" msprop:Generator_UserColumnName="Invoice_ID" type="xs:short" minOccurs="0" />
               <xs:element name="First" msprop:Generator_ColumnVarNameInTable="columnFirst" msprop:Generator_ColumnPropNameInRow="First" msprop:Generator_ColumnPropNameInTable="FirstColumn" msprop:Generator_UserColumnName="First" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -744,7 +744,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HouseType" msprop:Generator_TableClassName="HouseTypeDataTable" msprop:Generator_TableVarName="tableHouseType" msprop:Generator_RowChangedName="HouseTypeRowChanged" msprop:Generator_TablePropName="HouseType" msprop:Generator_RowDeletingName="HouseTypeRowDeleting" msprop:Generator_RowChangingName="HouseTypeRowChanging" msprop:Generator_RowEvHandlerName="HouseTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="HouseTypeRowDeleted" msprop:Generator_RowClassName="HouseTypeRow" msprop:Generator_UserTableName="HouseType" msprop:Generator_RowEvArgName="HouseTypeRowChangeEvent">
+        <xs:element name="HouseType" msprop:Generator_TableClassName="HouseTypeDataTable" msprop:Generator_TableVarName="tableHouseType" msprop:Generator_TablePropName="HouseType" msprop:Generator_RowDeletingName="HouseTypeRowDeleting" msprop:Generator_RowChangingName="HouseTypeRowChanging" msprop:Generator_RowEvHandlerName="HouseTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="HouseTypeRowDeleted" msprop:Generator_UserTableName="HouseType" msprop:Generator_RowChangedName="HouseTypeRowChanged" msprop:Generator_RowEvArgName="HouseTypeRowChangeEvent" msprop:Generator_RowClassName="HouseTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HouseType_ID" msprop:Generator_ColumnVarNameInTable="columnHouseType_ID" msprop:Generator_ColumnPropNameInRow="HouseType_ID" msprop:Generator_ColumnPropNameInTable="HouseType_IDColumn" msprop:Generator_UserColumnName="HouseType_ID" type="xs:double" />
@@ -764,20 +764,20 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Invoice" msprop:Generator_TableClassName="InvoiceDataTable" msprop:Generator_TableVarName="tableInvoice" msprop:Generator_RowChangedName="InvoiceRowChanged" msprop:Generator_TablePropName="Invoice" msprop:Generator_RowDeletingName="InvoiceRowDeleting" msprop:Generator_RowChangingName="InvoiceRowChanging" msprop:Generator_RowEvHandlerName="InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceRowDeleted" msprop:Generator_RowClassName="InvoiceRow" msprop:Generator_UserTableName="Invoice" msprop:Generator_RowEvArgName="InvoiceRowChangeEvent">
+        <xs:element name="Invoice" msprop:Generator_TableClassName="InvoiceDataTable" msprop:Generator_TableVarName="tableInvoice" msprop:Generator_TablePropName="Invoice" msprop:Generator_RowDeletingName="InvoiceRowDeleting" msprop:Generator_RowChangingName="InvoiceRowChanging" msprop:Generator_RowEvHandlerName="InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceRowDeleted" msprop:Generator_UserTableName="Invoice" msprop:Generator_RowChangedName="InvoiceRowChanged" msprop:Generator_RowEvArgName="InvoiceRowChangeEvent" msprop:Generator_RowClassName="InvoiceRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Invoice_ID" msprop:Generator_ColumnVarNameInTable="columnInvoice_ID" msprop:Generator_ColumnPropNameInRow="Invoice_ID" msprop:Generator_ColumnPropNameInTable="Invoice_IDColumn" msprop:Generator_UserColumnName="Invoice_ID" type="xs:int" />
+              <xs:element name="Invoice_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnInvoice_ID" msprop:Generator_ColumnPropNameInRow="Invoice_ID" msprop:Generator_ColumnPropNameInTable="Invoice_IDColumn" msprop:Generator_UserColumnName="Invoice_ID" type="xs:int" />
               <xs:element name="Customer_ID" msprop:Generator_ColumnVarNameInTable="columnCustomer_ID" msprop:Generator_ColumnPropNameInRow="Customer_ID" msprop:Generator_ColumnPropNameInTable="Customer_IDColumn" msprop:Generator_UserColumnName="Customer_ID" type="xs:short" minOccurs="0" />
               <xs:element name="OfficeWorker_ID" msprop:Generator_ColumnVarNameInTable="columnOfficeWorker_ID" msprop:Generator_ColumnPropNameInRow="OfficeWorker_ID" msprop:Generator_ColumnPropNameInTable="OfficeWorker_IDColumn" msprop:Generator_UserColumnName="OfficeWorker_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Invoice_Status_ID" msprop:Generator_ColumnVarNameInTable="columnInvoice_Status_ID" msprop:Generator_ColumnPropNameInRow="Invoice_Status_ID" msprop:Generator_ColumnPropNameInTable="Invoice_Status_IDColumn" msprop:Generator_UserColumnName="Invoice_Status_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="Invoice_Status_ID" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnInvoice_Status_ID" msprop:Generator_ColumnPropNameInRow="Invoice_Status_ID" msprop:Generator_ColumnPropNameInTable="Invoice_Status_IDColumn" msprop:Generator_UserColumnName="Invoice_Status_ID" type="xs:short" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="InvoiceStatus" msprop:Generator_TableClassName="InvoiceStatusDataTable" msprop:Generator_TableVarName="tableInvoiceStatus" msprop:Generator_RowChangedName="InvoiceStatusRowChanged" msprop:Generator_TablePropName="InvoiceStatus" msprop:Generator_RowDeletingName="InvoiceStatusRowDeleting" msprop:Generator_RowChangingName="InvoiceStatusRowChanging" msprop:Generator_RowEvHandlerName="InvoiceStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceStatusRowDeleted" msprop:Generator_RowClassName="InvoiceStatusRow" msprop:Generator_UserTableName="InvoiceStatus" msprop:Generator_RowEvArgName="InvoiceStatusRowChangeEvent">
+        <xs:element name="InvoiceStatus" msprop:Generator_TableClassName="InvoiceStatusDataTable" msprop:Generator_TableVarName="tableInvoiceStatus" msprop:Generator_TablePropName="InvoiceStatus" msprop:Generator_RowDeletingName="InvoiceStatusRowDeleting" msprop:Generator_RowChangingName="InvoiceStatusRowChanging" msprop:Generator_RowEvHandlerName="InvoiceStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceStatusRowDeleted" msprop:Generator_UserTableName="InvoiceStatus" msprop:Generator_RowChangedName="InvoiceStatusRowChanged" msprop:Generator_RowEvArgName="InvoiceStatusRowChangeEvent" msprop:Generator_RowClassName="InvoiceStatusRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Invoice_Status_ID" msprop:Generator_ColumnVarNameInTable="columnInvoice_Status_ID" msprop:Generator_ColumnPropNameInRow="Invoice_Status_ID" msprop:Generator_ColumnPropNameInTable="Invoice_Status_IDColumn" msprop:Generator_UserColumnName="Invoice_Status_ID" type="xs:short" />
+              <xs:element name="Invoice_Status_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnInvoice_Status_ID" msprop:Generator_ColumnPropNameInRow="Invoice_Status_ID" msprop:Generator_ColumnPropNameInTable="Invoice_Status_IDColumn" msprop:Generator_UserColumnName="Invoice_Status_ID" type="xs:short" />
               <xs:element name="Invoice_Type" msprop:Generator_ColumnVarNameInTable="columnInvoice_Type" msprop:Generator_ColumnPropNameInRow="Invoice_Type" msprop:Generator_ColumnPropNameInTable="Invoice_TypeColumn" msprop:Generator_UserColumnName="Invoice_Type" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -793,13 +793,14 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Complete" msprop:Generator_ColumnVarNameInTable="columnComplete" msprop:Generator_ColumnPropNameInRow="Complete" msprop:Generator_ColumnPropNameInTable="CompleteColumn" msprop:Generator_UserColumnName="Complete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TimeOfService" msprop:Generator_ColumnVarNameInTable="columnTimeOfService" msprop:Generator_ColumnPropNameInRow="TimeOfService" msprop:Generator_ColumnPropNameInTable="TimeOfServiceColumn" msprop:Generator_UserColumnName="TimeOfService" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="OfficeWorker" msprop:Generator_TableClassName="OfficeWorkerDataTable" msprop:Generator_TableVarName="tableOfficeWorker" msprop:Generator_RowChangedName="OfficeWorkerRowChanged" msprop:Generator_TablePropName="OfficeWorker" msprop:Generator_RowDeletingName="OfficeWorkerRowDeleting" msprop:Generator_RowChangingName="OfficeWorkerRowChanging" msprop:Generator_RowEvHandlerName="OfficeWorkerRowChangeEventHandler" msprop:Generator_RowDeletedName="OfficeWorkerRowDeleted" msprop:Generator_RowClassName="OfficeWorkerRow" msprop:Generator_UserTableName="OfficeWorker" msprop:Generator_RowEvArgName="OfficeWorkerRowChangeEvent">
+        <xs:element name="OfficeWorker" msprop:Generator_TableClassName="OfficeWorkerDataTable" msprop:Generator_TableVarName="tableOfficeWorker" msprop:Generator_TablePropName="OfficeWorker" msprop:Generator_RowDeletingName="OfficeWorkerRowDeleting" msprop:Generator_RowChangingName="OfficeWorkerRowChanging" msprop:Generator_RowEvHandlerName="OfficeWorkerRowChangeEventHandler" msprop:Generator_RowDeletedName="OfficeWorkerRowDeleted" msprop:Generator_UserTableName="OfficeWorker" msprop:Generator_RowChangedName="OfficeWorkerRowChanged" msprop:Generator_RowEvArgName="OfficeWorkerRowChangeEvent" msprop:Generator_RowClassName="OfficeWorkerRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="OfficeWorker_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOfficeWorker_ID" msprop:Generator_ColumnPropNameInRow="OfficeWorker_ID" msprop:Generator_ColumnPropNameInTable="OfficeWorker_IDColumn" msprop:Generator_UserColumnName="OfficeWorker_ID" type="xs:int" />
+              <xs:element name="OfficeWorker_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnOfficeWorker_ID" msprop:Generator_ColumnPropNameInRow="OfficeWorker_ID" msprop:Generator_ColumnPropNameInTable="OfficeWorker_IDColumn" msprop:Generator_UserColumnName="OfficeWorker_ID" type="xs:int" />
               <xs:element name="First" msprop:Generator_ColumnVarNameInTable="columnFirst" msprop:Generator_ColumnPropNameInRow="First" msprop:Generator_ColumnPropNameInTable="FirstColumn" msprop:Generator_UserColumnName="First" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -851,6 +852,18 @@
       <xs:selector xpath=".//mstns:Invoice" />
       <xs:field xpath="mstns:Invoice_ID" />
     </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Invoice" />
+      <xs:field xpath="mstns:OfficeWorker_ID" />
+    </xs:unique>
+    <xs:unique name="Constraint3">
+      <xs:selector xpath=".//mstns:Invoice" />
+      <xs:field xpath="mstns:Invoice_Status_ID" />
+    </xs:unique>
+    <xs:unique name="Constraint4">
+      <xs:selector xpath=".//mstns:Invoice" />
+      <xs:field xpath="mstns:Customer_ID" />
+    </xs:unique>
     <xs:unique name="InvoiceStatus_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:InvoiceStatus" />
       <xs:field xpath="mstns:Invoice_Status_ID" />
@@ -859,16 +872,31 @@
       <xs:selector xpath=".//mstns:OfficeWorker" />
       <xs:field xpath="mstns:OfficeWorker_ID" />
     </xs:unique>
+    <xs:keyref name="Invoice_OfficeWorker" refer="Constraint2" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:OfficeWorker" />
+      <xs:field xpath="mstns:OfficeWorker_ID" />
+    </xs:keyref>
+    <xs:keyref name="InvoiceStatusInvoice" refer="Constraint3" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:InvoiceStatus" />
+      <xs:field xpath="mstns:Invoice_Status_ID" />
+    </xs:keyref>
+    <xs:keyref name="CustomerInvoice" refer="Constraint4" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:Customer" />
+      <xs:field xpath="mstns:Customer_ID" />
+    </xs:keyref>
+    <xs:keyref name="Invoice_ContractorCompany" refer="Invoice_Constraint1" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:ContractorCompany" />
+      <xs:field xpath="mstns:Invoice_ID" />
+    </xs:keyref>
+    <xs:keyref name="ContractorCompany_Contractor" refer="ContractorCompany_Constraint1" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:Contractor" />
+      <xs:field xpath="mstns:Company_ID" />
+    </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="CommunityCustomer" msdata:parent="Community" msdata:child="Customer" msdata:parentkey="Community_Name" msdata:childkey="Community_Name" msprop:Generator_UserChildTable="Customer" msprop:Generator_ChildPropName="GetCustomerRows" msprop:Generator_UserRelationName="CommunityCustomer" msprop:Generator_RelationVarName="relationCommunityCustomer" msprop:Generator_UserParentTable="Community" msprop:Generator_ParentPropName="CommunityRow" />
-      <msdata:Relationship name="CustomerInvoice" msdata:parent="Customer" msdata:child="Invoice" msdata:parentkey="Customer_ID" msdata:childkey="Customer_ID" msprop:Generator_UserChildTable="Invoice" msprop:Generator_ChildPropName="GetInvoiceRows" msprop:Generator_UserRelationName="CustomerInvoice" msprop:Generator_RelationVarName="relationCustomerInvoice" msprop:Generator_UserParentTable="Customer" msprop:Generator_ParentPropName="CustomerRow" />
-      <msdata:Relationship name="InvoiceStatusInvoice" msdata:parent="InvoiceStatus" msdata:child="Invoice" msdata:parentkey="Invoice_Status_ID" msdata:childkey="Invoice_Status_ID" msprop:Generator_UserChildTable="Invoice" msprop:Generator_ChildPropName="GetInvoiceRows" msprop:Generator_UserRelationName="InvoiceStatusInvoice" msprop:Generator_ParentPropName="InvoiceStatusRow" msprop:Generator_RelationVarName="relationInvoiceStatusInvoice" msprop:Generator_UserParentTable="InvoiceStatus" />
-      <msdata:Relationship name="Community_HouseType" msdata:parent="Community" msdata:child="HouseType" msdata:parentkey="Community_ID" msdata:childkey="Community_ID" msprop:Generator_UserChildTable="HouseType" msprop:Generator_ChildPropName="GetHouseTypeRows" msprop:Generator_UserRelationName="Community_HouseType" msprop:Generator_ParentPropName="CommunityRow" msprop:Generator_RelationVarName="relationCommunity_HouseType" msprop:Generator_UserParentTable="Community" />
-      <msdata:Relationship name="ContractorCompany_Contractor" msdata:parent="ContractorCompany" msdata:child="Contractor" msdata:parentkey="Company_ID" msdata:childkey="Company_ID" msprop:Generator_UserChildTable="Contractor" msprop:Generator_ChildPropName="GetContractorRows" msprop:Generator_UserRelationName="ContractorCompany_Contractor" msprop:Generator_RelationVarName="relationContractorCompany_Contractor" msprop:Generator_UserParentTable="ContractorCompany" msprop:Generator_ParentPropName="ContractorCompanyRow" />
-      <msdata:Relationship name="Invoice_ContractorCompany" msdata:parent="Invoice" msdata:child="ContractorCompany" msdata:parentkey="Invoice_ID" msdata:childkey="Invoice_ID" msprop:Generator_UserChildTable="ContractorCompany" msprop:Generator_ChildPropName="GetContractorCompanyRows" msprop:Generator_UserRelationName="Invoice_ContractorCompany" msprop:Generator_RelationVarName="relationInvoice_ContractorCompany" msprop:Generator_UserParentTable="Invoice" msprop:Generator_ParentPropName="InvoiceRow" />
-      <msdata:Relationship name="Invoice_OfficeWorker" msdata:parent="Invoice" msdata:child="OfficeWorker" msdata:parentkey="OfficeWorker_ID" msdata:childkey="OfficeWorker_ID" msprop:Generator_UserChildTable="OfficeWorker" msprop:Generator_ChildPropName="GetOfficeWorkerRows" msprop:Generator_UserRelationName="Invoice_OfficeWorker" msprop:Generator_ParentPropName="InvoiceRow" msprop:Generator_RelationVarName="relationInvoice_OfficeWorker" msprop:Generator_UserParentTable="Invoice" />
+      <msdata:Relationship name="CommunityCustomer" msdata:parent="Community" msdata:child="Customer" msdata:parentkey="Community_Name" msdata:childkey="Community_Name" msprop:Generator_UserChildTable="Customer" msprop:Generator_ChildPropName="GetCustomerRows" msprop:Generator_UserRelationName="CommunityCustomer" msprop:Generator_ParentPropName="CommunityRow" msprop:Generator_RelationVarName="relationCommunityCustomer" msprop:Generator_UserParentTable="Community" />
+      <msdata:Relationship name="Community_HouseType" msdata:parent="Community" msdata:child="HouseType" msdata:parentkey="Community_ID" msdata:childkey="Community_ID" msprop:Generator_UserChildTable="HouseType" msprop:Generator_ChildPropName="GetHouseTypeRows" msprop:Generator_UserRelationName="Community_HouseType" msprop:Generator_RelationVarName="relationCommunity_HouseType" msprop:Generator_UserParentTable="Community" msprop:Generator_ParentPropName="CommunityRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

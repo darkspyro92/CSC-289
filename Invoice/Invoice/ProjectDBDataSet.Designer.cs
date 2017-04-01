@@ -42,17 +42,7 @@ namespace Invoice {
         
         private global::System.Data.DataRelation relationCommunityCustomer;
         
-        private global::System.Data.DataRelation relationCustomerInvoice;
-        
-        private global::System.Data.DataRelation relationInvoiceStatusInvoice;
-        
         private global::System.Data.DataRelation relationCommunity_HouseType;
-        
-        private global::System.Data.DataRelation relationContractorCompany_Contractor;
-        
-        private global::System.Data.DataRelation relationInvoice_ContractorCompany;
-        
-        private global::System.Data.DataRelation relationInvoice_OfficeWorker;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -377,12 +367,7 @@ namespace Invoice {
                 }
             }
             this.relationCommunityCustomer = this.Relations["CommunityCustomer"];
-            this.relationCustomerInvoice = this.Relations["CustomerInvoice"];
-            this.relationInvoiceStatusInvoice = this.Relations["InvoiceStatusInvoice"];
             this.relationCommunity_HouseType = this.Relations["Community_HouseType"];
-            this.relationContractorCompany_Contractor = this.Relations["ContractorCompany_Contractor"];
-            this.relationInvoice_ContractorCompany = this.Relations["Invoice_ContractorCompany"];
-            this.relationInvoice_OfficeWorker = this.Relations["Invoice_OfficeWorker"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -409,34 +394,50 @@ namespace Invoice {
             base.Tables.Add(this.tableInvoiceStatus);
             this.tableOfficeWorker = new OfficeWorkerDataTable();
             base.Tables.Add(this.tableOfficeWorker);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("ContractorCompany_Contractor", new global::System.Data.DataColumn[] {
+                        this.tableContractorCompany.Company_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableContractor.Company_IDColumn});
+            this.tableContractor.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("Invoice_ContractorCompany", new global::System.Data.DataColumn[] {
+                        this.tableInvoice.Invoice_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableContractorCompany.Invoice_IDColumn});
+            this.tableContractorCompany.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("CustomerInvoice", new global::System.Data.DataColumn[] {
+                        this.tableInvoice.Customer_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCustomer.Customer_IDColumn});
+            this.tableCustomer.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("InvoiceStatusInvoice", new global::System.Data.DataColumn[] {
+                        this.tableInvoice.Invoice_Status_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableInvoiceStatus.Invoice_Status_IDColumn});
+            this.tableInvoiceStatus.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("Invoice_OfficeWorker", new global::System.Data.DataColumn[] {
+                        this.tableInvoice.OfficeWorker_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOfficeWorker.OfficeWorker_IDColumn});
+            this.tableOfficeWorker.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             this.relationCommunityCustomer = new global::System.Data.DataRelation("CommunityCustomer", new global::System.Data.DataColumn[] {
                         this.tableCommunity.Community_NameColumn}, new global::System.Data.DataColumn[] {
                         this.tableCustomer.Community_NameColumn}, false);
             this.Relations.Add(this.relationCommunityCustomer);
-            this.relationCustomerInvoice = new global::System.Data.DataRelation("CustomerInvoice", new global::System.Data.DataColumn[] {
-                        this.tableCustomer.Customer_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableInvoice.Customer_IDColumn}, false);
-            this.Relations.Add(this.relationCustomerInvoice);
-            this.relationInvoiceStatusInvoice = new global::System.Data.DataRelation("InvoiceStatusInvoice", new global::System.Data.DataColumn[] {
-                        this.tableInvoiceStatus.Invoice_Status_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableInvoice.Invoice_Status_IDColumn}, false);
-            this.Relations.Add(this.relationInvoiceStatusInvoice);
             this.relationCommunity_HouseType = new global::System.Data.DataRelation("Community_HouseType", new global::System.Data.DataColumn[] {
                         this.tableCommunity.Community_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableHouseType.Community_IDColumn}, false);
             this.Relations.Add(this.relationCommunity_HouseType);
-            this.relationContractorCompany_Contractor = new global::System.Data.DataRelation("ContractorCompany_Contractor", new global::System.Data.DataColumn[] {
-                        this.tableContractorCompany.Company_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableContractor.Company_IDColumn}, false);
-            this.Relations.Add(this.relationContractorCompany_Contractor);
-            this.relationInvoice_ContractorCompany = new global::System.Data.DataRelation("Invoice_ContractorCompany", new global::System.Data.DataColumn[] {
-                        this.tableInvoice.Invoice_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableContractorCompany.Invoice_IDColumn}, false);
-            this.Relations.Add(this.relationInvoice_ContractorCompany);
-            this.relationInvoice_OfficeWorker = new global::System.Data.DataRelation("Invoice_OfficeWorker", new global::System.Data.DataColumn[] {
-                        this.tableInvoice.OfficeWorker_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOfficeWorker.OfficeWorker_IDColumn}, false);
-            this.Relations.Add(this.relationInvoice_OfficeWorker);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -663,10 +664,10 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CommunityRow AddCommunityRow(string Community_Name) {
+            public CommunityRow AddCommunityRow(int Community_ID, string Community_Name) {
                 CommunityRow rowCommunityRow = ((CommunityRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        Community_ID,
                         Community_Name};
                 rowCommunityRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCommunityRow);
@@ -710,9 +711,6 @@ namespace Invoice {
                 base.Columns.Add(this.columnCommunity_Name);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCommunity_ID}, true));
-                this.columnCommunity_ID.AutoIncrement = true;
-                this.columnCommunity_ID.AutoIncrementSeed = -1;
-                this.columnCommunity_ID.AutoIncrementStep = -1;
                 this.columnCommunity_ID.AllowDBNull = false;
                 this.columnCommunity_ID.Unique = true;
                 this.columnCommunity_Name.MaxLength = 255;
@@ -979,18 +977,15 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContractorRow AddContractorRow(short Contractor_ID, ContractorCompanyRow parentContractorCompanyRowByContractorCompany_Contractor, string First, string Last, short _Phone_, string Email) {
+            public ContractorRow AddContractorRow(int Company_ID, string First, string Last, short _Phone_, string Email) {
                 ContractorRow rowContractorRow = ((ContractorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Contractor_ID,
                         null,
+                        Company_ID,
                         First,
                         Last,
                         _Phone_,
                         Email};
-                if ((parentContractorCompanyRowByContractorCompany_Contractor != null)) {
-                    columnValuesArray[1] = parentContractorCompanyRowByContractorCompany_Contractor[0];
-                }
                 rowContractorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContractorRow);
                 return rowContractorRow;
@@ -1047,6 +1042,8 @@ namespace Invoice {
                 base.Columns.Add(this.columnEmail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnContractor_ID}, true));
+                this.columnContractor_ID.AutoIncrement = true;
+                this.columnContractor_ID.AutoIncrementSeed = 1;
                 this.columnContractor_ID.AllowDBNull = false;
                 this.columnContractor_ID.Unique = true;
                 this.columnFirst.MaxLength = 255;
@@ -1315,18 +1312,15 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContractorCompanyRow AddContractorCompanyRow(InvoiceRow parentInvoiceRowByInvoice_ContractorCompany, string Company_Name, string Company_Address, int _Phone_, string Email) {
+            public ContractorCompanyRow AddContractorCompanyRow(int Invoice_ID, string Company_Name, string Company_Address, int _Phone_, string Email) {
                 ContractorCompanyRow rowContractorCompanyRow = ((ContractorCompanyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
+                        Invoice_ID,
                         Company_Name,
                         Company_Address,
                         _Phone_,
                         Email};
-                if ((parentInvoiceRowByInvoice_ContractorCompany != null)) {
-                    columnValuesArray[1] = parentInvoiceRowByInvoice_ContractorCompany[0];
-                }
                 rowContractorCompanyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowContractorCompanyRow);
                 return rowContractorCompanyRow;
@@ -1384,8 +1378,7 @@ namespace Invoice {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCompany_ID}, true));
                 this.columnCompany_ID.AutoIncrement = true;
-                this.columnCompany_ID.AutoIncrementSeed = -1;
-                this.columnCompany_ID.AutoIncrementStep = -1;
+                this.columnCompany_ID.AutoIncrementSeed = 1;
                 this.columnCompany_ID.AllowDBNull = false;
                 this.columnCompany_ID.Unique = true;
                 this.columnCompany_Name.MaxLength = 255;
@@ -1744,12 +1737,12 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomerRow AddCustomerRow(short Customer_ID, CommunityRow parentCommunityRowByCommunityCustomer, short Invoice_ID, string First, string Last, string Address, string Email, short _Primary_, string Primary_Phone_Type, short Primary_Extension, short _Alternate_Phone_, string Alternate_Phone_Type, short Alternate_Extension, bool Permission_To_Enter, bool Pets) {
+            public CustomerRow AddCustomerRow(CommunityRow parentCommunityRowByCommunityCustomer, string First, string Last, string Address, string Email, short _Primary_, string Primary_Phone_Type, short Primary_Extension, short _Alternate_Phone_, string Alternate_Phone_Type, short Alternate_Extension, bool Permission_To_Enter, bool Pets) {
                 CustomerRow rowCustomerRow = ((CustomerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Customer_ID,
                         null,
-                        Invoice_ID,
+                        null,
+                        null,
                         First,
                         Last,
                         Address,
@@ -1850,9 +1843,14 @@ namespace Invoice {
                 base.Columns.Add(this.columnPets);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCustomer_ID}, true));
+                this.columnCustomer_ID.AutoIncrement = true;
+                this.columnCustomer_ID.AutoIncrementSeed = 1;
                 this.columnCustomer_ID.AllowDBNull = false;
                 this.columnCustomer_ID.Unique = true;
                 this.columnCommunity_Name.MaxLength = 255;
+                this.columnInvoice_ID.AutoIncrement = true;
+                this.columnInvoice_ID.AutoIncrementSeed = -1;
+                this.columnInvoice_ID.AutoIncrementStep = -1;
                 this.columnFirst.MaxLength = 255;
                 this.columnLast.MaxLength = 255;
                 this.columnAddress.MaxLength = 255;
@@ -2468,19 +2466,13 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceRow AddInvoiceRow(int Invoice_ID, CustomerRow parentCustomerRowByCustomerInvoice, int OfficeWorker_ID, InvoiceStatusRow parentInvoiceStatusRowByInvoiceStatusInvoice) {
+            public InvoiceRow AddInvoiceRow(short Customer_ID, int OfficeWorker_ID, short Invoice_Status_ID) {
                 InvoiceRow rowInvoiceRow = ((InvoiceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Invoice_ID,
                         null,
+                        Customer_ID,
                         OfficeWorker_ID,
-                        null};
-                if ((parentCustomerRowByCustomerInvoice != null)) {
-                    columnValuesArray[1] = parentCustomerRowByCustomerInvoice[0];
-                }
-                if ((parentInvoiceStatusRowByInvoiceStatusInvoice != null)) {
-                    columnValuesArray[3] = parentInvoiceStatusRowByInvoiceStatusInvoice[0];
-                }
+                        Invoice_Status_ID};
                 rowInvoiceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInvoiceRow);
                 return rowInvoiceRow;
@@ -2529,8 +2521,21 @@ namespace Invoice {
                 base.Columns.Add(this.columnInvoice_Status_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnInvoice_ID}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnOfficeWorker_ID}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnInvoice_Status_ID}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint4", new global::System.Data.DataColumn[] {
+                                this.columnCustomer_ID}, false));
+                this.columnInvoice_ID.AutoIncrement = true;
+                this.columnInvoice_ID.AutoIncrementSeed = 1;
                 this.columnInvoice_ID.AllowDBNull = false;
                 this.columnInvoice_ID.Unique = true;
+                this.columnCustomer_ID.Unique = true;
+                this.columnOfficeWorker_ID.Unique = true;
+                this.columnInvoice_Status_ID.AutoIncrementSeed = -1;
+                this.columnInvoice_Status_ID.AutoIncrementStep = -1;
+                this.columnInvoice_Status_ID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2672,6 +2677,8 @@ namespace Invoice {
             
             private global::System.Data.DataColumn columnComplete;
             
+            private global::System.Data.DataColumn columnTimeOfService;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public InvoiceStatusDataTable() {
@@ -2739,6 +2746,14 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TimeOfServiceColumn {
+                get {
+                    return this.columnTimeOfService;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2774,13 +2789,14 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceStatusRow AddInvoiceStatusRow(short Invoice_Status_ID, string Invoice_Type, string Description, bool Complete) {
+            public InvoiceStatusRow AddInvoiceStatusRow(string Invoice_Type, string Description, bool Complete, string TimeOfService) {
                 InvoiceStatusRow rowInvoiceStatusRow = ((InvoiceStatusRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Invoice_Status_ID,
+                        null,
                         Invoice_Type,
                         Description,
-                        Complete};
+                        Complete,
+                        TimeOfService};
                 rowInvoiceStatusRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInvoiceStatusRow);
                 return rowInvoiceStatusRow;
@@ -2814,6 +2830,7 @@ namespace Invoice {
                 this.columnInvoice_Type = base.Columns["Invoice_Type"];
                 this.columnDescription = base.Columns["Description"];
                 this.columnComplete = base.Columns["Complete"];
+                this.columnTimeOfService = base.Columns["TimeOfService"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2827,8 +2844,12 @@ namespace Invoice {
                 base.Columns.Add(this.columnDescription);
                 this.columnComplete = new global::System.Data.DataColumn("Complete", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComplete);
+                this.columnTimeOfService = new global::System.Data.DataColumn("TimeOfService", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTimeOfService);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnInvoice_Status_ID}, true));
+                this.columnInvoice_Status_ID.AutoIncrement = true;
+                this.columnInvoice_Status_ID.AutoIncrementSeed = 1;
                 this.columnInvoice_Status_ID.AllowDBNull = false;
                 this.columnInvoice_Status_ID.Unique = true;
                 this.columnInvoice_Type.MaxLength = 255;
@@ -3148,8 +3169,7 @@ namespace Invoice {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOfficeWorker_ID}, true));
                 this.columnOfficeWorker_ID.AutoIncrement = true;
-                this.columnOfficeWorker_ID.AutoIncrementSeed = -1;
-                this.columnOfficeWorker_ID.AutoIncrementStep = -1;
+                this.columnOfficeWorker_ID.AutoIncrementSeed = 1;
                 this.columnOfficeWorker_ID.AllowDBNull = false;
                 this.columnOfficeWorker_ID.Unique = true;
                 this.columnFirst.MaxLength = 255;
@@ -3464,17 +3484,6 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContractorCompanyRow ContractorCompanyRow {
-                get {
-                    return ((ContractorCompanyRow)(this.GetParentRow(this.Table.ParentRelations["ContractorCompany_Contractor"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ContractorCompany_Contractor"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCompany_IDNull() {
                 return this.IsNull(this.tableContractor.Company_IDColumn);
             }
@@ -3641,17 +3650,6 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceRow InvoiceRow {
-                get {
-                    return ((InvoiceRow)(this.GetParentRow(this.Table.ParentRelations["Invoice_ContractorCompany"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Invoice_ContractorCompany"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsInvoice_IDNull() {
                 return this.IsNull(this.tableContractorCompany.Invoice_IDColumn);
             }
@@ -3708,17 +3706,6 @@ namespace Invoice {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEmailNull() {
                 this[this.tableContractorCompany.EmailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContractorRow[] GetContractorRows() {
-                if ((this.Table.ChildRelations["ContractorCompany_Contractor"] == null)) {
-                    return new ContractorRow[0];
-                }
-                else {
-                    return ((ContractorRow[])(base.GetChildRows(this.Table.ChildRelations["ContractorCompany_Contractor"])));
-                }
             }
         }
         
@@ -4149,17 +4136,6 @@ namespace Invoice {
             public void SetPetsNull() {
                 this[this.tableCustomer.PetsColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceRow[] GetInvoiceRows() {
-                if ((this.Table.ChildRelations["CustomerInvoice"] == null)) {
-                    return new InvoiceRow[0];
-                }
-                else {
-                    return ((InvoiceRow[])(base.GetChildRows(this.Table.ChildRelations["CustomerInvoice"])));
-                }
-            }
         }
         
         /// <summary>
@@ -4470,28 +4446,6 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CustomerRow CustomerRow {
-                get {
-                    return ((CustomerRow)(this.GetParentRow(this.Table.ParentRelations["CustomerInvoice"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["CustomerInvoice"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceStatusRow InvoiceStatusRow {
-                get {
-                    return ((InvoiceStatusRow)(this.GetParentRow(this.Table.ParentRelations["InvoiceStatusInvoice"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["InvoiceStatusInvoice"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCustomer_IDNull() {
                 return this.IsNull(this.tableInvoice.Customer_IDColumn);
             }
@@ -4524,28 +4478,6 @@ namespace Invoice {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetInvoice_Status_IDNull() {
                 this[this.tableInvoice.Invoice_Status_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ContractorCompanyRow[] GetContractorCompanyRows() {
-                if ((this.Table.ChildRelations["Invoice_ContractorCompany"] == null)) {
-                    return new ContractorCompanyRow[0];
-                }
-                else {
-                    return ((ContractorCompanyRow[])(base.GetChildRows(this.Table.ChildRelations["Invoice_ContractorCompany"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public OfficeWorkerRow[] GetOfficeWorkerRows() {
-                if ((this.Table.ChildRelations["Invoice_OfficeWorker"] == null)) {
-                    return new OfficeWorkerRow[0];
-                }
-                else {
-                    return ((OfficeWorkerRow[])(base.GetChildRows(this.Table.ChildRelations["Invoice_OfficeWorker"])));
-                }
             }
         }
         
@@ -4624,6 +4556,22 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TimeOfService {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvoiceStatus.TimeOfServiceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TimeOfService\' in table \'InvoiceStatus\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvoiceStatus.TimeOfServiceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsInvoice_TypeNull() {
                 return this.IsNull(this.tableInvoiceStatus.Invoice_TypeColumn);
             }
@@ -4660,13 +4608,14 @@ namespace Invoice {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceRow[] GetInvoiceRows() {
-                if ((this.Table.ChildRelations["InvoiceStatusInvoice"] == null)) {
-                    return new InvoiceRow[0];
-                }
-                else {
-                    return ((InvoiceRow[])(base.GetChildRows(this.Table.ChildRelations["InvoiceStatusInvoice"])));
-                }
+            public bool IsTimeOfServiceNull() {
+                return this.IsNull(this.tableInvoiceStatus.TimeOfServiceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTimeOfServiceNull() {
+                this[this.tableInvoiceStatus.TimeOfServiceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4756,17 +4705,6 @@ namespace Invoice {
                 }
                 set {
                     this[this.tableOfficeWorker.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceRow InvoiceRow {
-                get {
-                    return ((InvoiceRow)(this.GetParentRow(this.Table.ParentRelations["Invoice_OfficeWorker"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Invoice_OfficeWorker"]);
                 }
             }
             
@@ -9003,39 +8941,21 @@ namespace Invoice.ProjectDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(ProjectDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._communityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Community.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._communityTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._customerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._customerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._invoiceStatusTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.InvoiceStatus.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._invoiceStatusTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._invoiceTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Invoice.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._invoiceTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._communityTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Community.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._communityTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9057,12 +8977,30 @@ namespace Invoice.ProjectDBDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._customerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._customerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._houseTypeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.HouseType.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._houseTypeTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._invoiceStatusTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.InvoiceStatus.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._invoiceStatusTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9085,35 +9023,19 @@ namespace Invoice.ProjectDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(ProjectDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._communityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Community.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._communityTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._customerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._customerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._invoiceStatusTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.InvoiceStatus.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._invoiceStatusTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._invoiceTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Invoice.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._invoiceTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._communityTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Community.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._communityTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9133,11 +9055,27 @@ namespace Invoice.ProjectDBDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._customerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._customerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._houseTypeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.HouseType.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._houseTypeTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._invoiceStatusTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.InvoiceStatus.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._invoiceStatusTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9167,11 +9105,27 @@ namespace Invoice.ProjectDBDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._invoiceStatusTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.InvoiceStatus.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._invoiceStatusTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._houseTypeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.HouseType.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._houseTypeTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._customerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._customerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9191,35 +9145,19 @@ namespace Invoice.ProjectDBDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._invoiceTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Invoice.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._invoiceTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._invoiceStatusTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.InvoiceStatus.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._invoiceStatusTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._customerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._customerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._communityTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Community.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._communityTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._invoiceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Invoice.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._invoiceTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

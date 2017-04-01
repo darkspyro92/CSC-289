@@ -33,18 +33,18 @@
             this.lblDescriptionPrompt = new System.Windows.Forms.Label();
             this.lblWorkOrderTypePrompt = new System.Windows.Forms.Label();
             this.gbxOfficeWorkOrder = new System.Windows.Forms.GroupBox();
-            this.txtWorkOrderType = new System.Windows.Forms.TextBox();
-            this.txtStreetAddress = new System.Windows.Forms.TextBox();
+            this.gbxOccupancyStatus = new System.Windows.Forms.GroupBox();
             this.rbtnOccupied = new System.Windows.Forms.RadioButton();
             this.rbtnUnoccupied = new System.Windows.Forms.RadioButton();
-            this.gbxOccupancyStatus = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.txtContractingCompany = new System.Windows.Forms.TextBox();
             this.lblContractingCompanyPrompt = new System.Windows.Forms.Label();
             this.lblDueDatePrompt = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.txtStreetAddress = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cmbxWorkOrderType = new System.Windows.Forms.ComboBox();
             this.gbxOfficeWorkOrder.SuspendLayout();
             this.gbxOccupancyStatus.SuspendLayout();
             this.SuspendLayout();
@@ -90,13 +90,13 @@
             // 
             // gbxOfficeWorkOrder
             // 
+            this.gbxOfficeWorkOrder.Controls.Add(this.cmbxWorkOrderType);
             this.gbxOfficeWorkOrder.Controls.Add(this.gbxOccupancyStatus);
             this.gbxOfficeWorkOrder.Controls.Add(this.dateTimePicker);
             this.gbxOfficeWorkOrder.Controls.Add(this.txtContractingCompany);
             this.gbxOfficeWorkOrder.Controls.Add(this.lblContractingCompanyPrompt);
             this.gbxOfficeWorkOrder.Controls.Add(this.lblDueDatePrompt);
             this.gbxOfficeWorkOrder.Controls.Add(this.txtStreetAddress);
-            this.gbxOfficeWorkOrder.Controls.Add(this.txtWorkOrderType);
             this.gbxOfficeWorkOrder.Controls.Add(this.rtxtDescriptionOfRequest);
             this.gbxOfficeWorkOrder.Controls.Add(this.lblDescriptionPrompt);
             this.gbxOfficeWorkOrder.Controls.Add(this.lblStreetAddressPrompt);
@@ -108,19 +108,16 @@
             this.gbxOfficeWorkOrder.TabStop = false;
             this.gbxOfficeWorkOrder.Text = "Work Order Information:";
             // 
-            // txtWorkOrderType
+            // gbxOccupancyStatus
             // 
-            this.txtWorkOrderType.Location = new System.Drawing.Point(187, 59);
-            this.txtWorkOrderType.Name = "txtWorkOrderType";
-            this.txtWorkOrderType.Size = new System.Drawing.Size(237, 22);
-            this.txtWorkOrderType.TabIndex = 1033;
-            // 
-            // txtStreetAddress
-            // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(187, 21);
-            this.txtStreetAddress.Name = "txtStreetAddress";
-            this.txtStreetAddress.Size = new System.Drawing.Size(237, 22);
-            this.txtStreetAddress.TabIndex = 1034;
+            this.gbxOccupancyStatus.Controls.Add(this.rbtnOccupied);
+            this.gbxOccupancyStatus.Controls.Add(this.rbtnUnoccupied);
+            this.gbxOccupancyStatus.Location = new System.Drawing.Point(17, 168);
+            this.gbxOccupancyStatus.Name = "gbxOccupancyStatus";
+            this.gbxOccupancyStatus.Size = new System.Drawing.Size(233, 57);
+            this.gbxOccupancyStatus.TabIndex = 1037;
+            this.gbxOccupancyStatus.TabStop = false;
+            this.gbxOccupancyStatus.Text = "Occupancy Status:";
             // 
             // rbtnOccupied
             // 
@@ -135,25 +132,19 @@
             // rbtnUnoccupied
             // 
             this.rbtnUnoccupied.AutoSize = true;
-            this.rbtnUnoccupied.Checked = true;
             this.rbtnUnoccupied.Location = new System.Drawing.Point(120, 21);
             this.rbtnUnoccupied.Name = "rbtnUnoccupied";
             this.rbtnUnoccupied.Size = new System.Drawing.Size(104, 21);
             this.rbtnUnoccupied.TabIndex = 1036;
-            this.rbtnUnoccupied.TabStop = true;
             this.rbtnUnoccupied.Text = "Unoccupied";
             this.rbtnUnoccupied.UseVisualStyleBackColor = true;
             // 
-            // gbxOccupancyStatus
+            // dateTimePicker
             // 
-            this.gbxOccupancyStatus.Controls.Add(this.rbtnOccupied);
-            this.gbxOccupancyStatus.Controls.Add(this.rbtnUnoccupied);
-            this.gbxOccupancyStatus.Location = new System.Drawing.Point(17, 168);
-            this.gbxOccupancyStatus.Name = "gbxOccupancyStatus";
-            this.gbxOccupancyStatus.Size = new System.Drawing.Size(233, 57);
-            this.gbxOccupancyStatus.TabIndex = 1037;
-            this.gbxOccupancyStatus.TabStop = false;
-            this.gbxOccupancyStatus.Text = "Occupancy Status:";
+            this.dateTimePicker.Location = new System.Drawing.Point(187, 133);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(237, 22);
+            this.dateTimePicker.TabIndex = 1039;
             // 
             // txtContractingCompany
             // 
@@ -182,12 +173,12 @@
             this.lblDueDatePrompt.TabIndex = 1036;
             this.lblDueDatePrompt.Text = "Due Date:";
             // 
-            // dateTimePicker
+            // txtStreetAddress
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(187, 133);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(237, 22);
-            this.dateTimePicker.TabIndex = 1039;
+            this.txtStreetAddress.Location = new System.Drawing.Point(187, 21);
+            this.txtStreetAddress.Name = "txtStreetAddress";
+            this.txtStreetAddress.Size = new System.Drawing.Size(237, 22);
+            this.txtStreetAddress.TabIndex = 1034;
             // 
             // btnSubmit
             // 
@@ -215,6 +206,21 @@
             this.btnCancel.TabIndex = 1036;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // cmbxWorkOrderType
+            // 
+            this.cmbxWorkOrderType.FormattingEnabled = true;
+            this.cmbxWorkOrderType.Items.AddRange(new object[] {
+            "Plumbing",
+            "Carpentry",
+            "Electrical",
+            "HVAC",
+            "Other"});
+            this.cmbxWorkOrderType.Location = new System.Drawing.Point(186, 59);
+            this.cmbxWorkOrderType.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbxWorkOrderType.Name = "cmbxWorkOrderType";
+            this.cmbxWorkOrderType.Size = new System.Drawing.Size(238, 24);
+            this.cmbxWorkOrderType.TabIndex = 1037;
             // 
             // OfficeWorkOrder
             // 
@@ -250,9 +256,9 @@
         private System.Windows.Forms.Label lblContractingCompanyPrompt;
         private System.Windows.Forms.Label lblDueDatePrompt;
         private System.Windows.Forms.TextBox txtStreetAddress;
-        private System.Windows.Forms.TextBox txtWorkOrderType;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cmbxWorkOrderType;
     }
 }

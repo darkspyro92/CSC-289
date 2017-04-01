@@ -36,8 +36,6 @@
             this.printInvoiceButton = new System.Windows.Forms.Button();
             this.invoiceInformationDescriptionOfRequestRichTextBox = new System.Windows.Forms.RichTextBox();
             this.invoiceInformationPermissionToEnterLabel = new System.Windows.Forms.Label();
-            this.invoiceInformationNonMilitaryEmailLabel = new System.Windows.Forms.Label();
-            this.invoiceInformationNonMilitaryEmailLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationRequestTimeOfServiceLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationPrimaryPhoneTypeLabel = new System.Windows.Forms.Label();
             this.invoiceInformationPrimaryPhoneTypeLabelPrompt = new System.Windows.Forms.Label();
@@ -70,10 +68,10 @@
             this.invoiceInformationStreetAddressLabelPrompt = new System.Windows.Forms.Label();
             this.invoiceInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.gbxCommentsAndStatus = new System.Windows.Forms.GroupBox();
-            this.rButtonComplete = new System.Windows.Forms.RadioButton();
-            this.rButtonIncomplete = new System.Windows.Forms.RadioButton();
-            this.lblCommentsPrompt = new System.Windows.Forms.Label();
             this.rTxtBoxComments = new System.Windows.Forms.RichTextBox();
+            this.lblCommentsPrompt = new System.Windows.Forms.Label();
+            this.rButtonIncomplete = new System.Windows.Forms.RadioButton();
+            this.rButtonComplete = new System.Windows.Forms.RadioButton();
             this.invoiceInformationGroupBox.SuspendLayout();
             this.gbxCommentsAndStatus.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +84,8 @@
             this.invoiceDatabaseListBox.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceDatabaseListBox.Name = "invoiceDatabaseListBox";
             this.invoiceDatabaseListBox.Size = new System.Drawing.Size(377, 468);
-            this.invoiceDatabaseListBox.TabIndex = 0;            // 
+            this.invoiceDatabaseListBox.TabIndex = 0;
+            // 
             // invoiceDatabaseListboxLabelPrompt
             // 
             this.invoiceDatabaseListboxLabelPrompt.AutoSize = true;
@@ -106,6 +105,7 @@
             this.newInvoiceButton.TabIndex = 1;
             this.newInvoiceButton.Text = "New";
             this.newInvoiceButton.UseVisualStyleBackColor = true;
+            this.newInvoiceButton.Click += new System.EventHandler(this.newInvoiceButton_Click);
             // 
             // newInvoiceButtonLabelPrompt
             // 
@@ -119,27 +119,29 @@
             // 
             // invoiceInformationCancelButton
             // 
-            this.invoiceInformationCancelButton.Location = new System.Drawing.Point(268, 713);
+            this.invoiceInformationCancelButton.Location = new System.Drawing.Point(266, 687);
             this.invoiceInformationCancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceInformationCancelButton.Name = "invoiceInformationCancelButton";
             this.invoiceInformationCancelButton.Size = new System.Drawing.Size(100, 28);
             this.invoiceInformationCancelButton.TabIndex = 3;
             this.invoiceInformationCancelButton.Text = "Cancel";
             this.invoiceInformationCancelButton.UseVisualStyleBackColor = true;
+            this.invoiceInformationCancelButton.Click += new System.EventHandler(this.invoiceInformationCancelButton_Click);
             // 
             // printInvoiceButton
             // 
-            this.printInvoiceButton.Location = new System.Drawing.Point(80, 713);
+            this.printInvoiceButton.Location = new System.Drawing.Point(78, 687);
             this.printInvoiceButton.Margin = new System.Windows.Forms.Padding(4);
             this.printInvoiceButton.Name = "printInvoiceButton";
             this.printInvoiceButton.Size = new System.Drawing.Size(100, 28);
             this.printInvoiceButton.TabIndex = 2;
             this.printInvoiceButton.Text = "Print Invoice";
             this.printInvoiceButton.UseVisualStyleBackColor = true;
+            this.printInvoiceButton.Click += new System.EventHandler(this.printInvoiceButton_Click);
             // 
             // invoiceInformationDescriptionOfRequestRichTextBox
             // 
-            this.invoiceInformationDescriptionOfRequestRichTextBox.Location = new System.Drawing.Point(12, 485);
+            this.invoiceInformationDescriptionOfRequestRichTextBox.Location = new System.Drawing.Point(12, 452);
             this.invoiceInformationDescriptionOfRequestRichTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceInformationDescriptionOfRequestRichTextBox.Name = "invoiceInformationDescriptionOfRequestRichTextBox";
             this.invoiceInformationDescriptionOfRequestRichTextBox.ReadOnly = true;
@@ -150,37 +152,17 @@
             // invoiceInformationPermissionToEnterLabel
             // 
             this.invoiceInformationPermissionToEnterLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.invoiceInformationPermissionToEnterLabel.Location = new System.Drawing.Point(191, 641);
+            this.invoiceInformationPermissionToEnterLabel.Location = new System.Drawing.Point(191, 608);
             this.invoiceInformationPermissionToEnterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationPermissionToEnterLabel.Name = "invoiceInformationPermissionToEnterLabel";
             this.invoiceInformationPermissionToEnterLabel.Size = new System.Drawing.Size(237, 23);
             this.invoiceInformationPermissionToEnterLabel.TabIndex = 1016;
             this.invoiceInformationPermissionToEnterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // invoiceInformationNonMilitaryEmailLabel
-            // 
-            this.invoiceInformationNonMilitaryEmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.invoiceInformationNonMilitaryEmailLabel.Location = new System.Drawing.Point(191, 393);
-            this.invoiceInformationNonMilitaryEmailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.invoiceInformationNonMilitaryEmailLabel.Name = "invoiceInformationNonMilitaryEmailLabel";
-            this.invoiceInformationNonMilitaryEmailLabel.Size = new System.Drawing.Size(237, 23);
-            this.invoiceInformationNonMilitaryEmailLabel.TabIndex = 1012;
-            this.invoiceInformationNonMilitaryEmailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // invoiceInformationNonMilitaryEmailLabelPrompt
-            // 
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.AutoSize = true;
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.Location = new System.Drawing.Point(8, 396);
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.Name = "invoiceInformationNonMilitaryEmailLabelPrompt";
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.Size = new System.Drawing.Size(125, 17);
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.TabIndex = 1032;
-            this.invoiceInformationNonMilitaryEmailLabelPrompt.Text = "Non-Military Email:";
-            // 
             // invoiceInformationRequestTimeOfServiceLabelPrompt
             // 
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.AutoSize = true;
-            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Location = new System.Drawing.Point(8, 612);
+            this.invoiceInformationRequestTimeOfServiceLabelPrompt.Location = new System.Drawing.Point(8, 579);
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.Name = "invoiceInformationRequestTimeOfServiceLabelPrompt";
             this.invoiceInformationRequestTimeOfServiceLabelPrompt.Size = new System.Drawing.Size(167, 17);
@@ -210,7 +192,7 @@
             // invoiceInformationRequestTimeOfServiceLabel
             // 
             this.invoiceInformationRequestTimeOfServiceLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.invoiceInformationRequestTimeOfServiceLabel.Location = new System.Drawing.Point(191, 608);
+            this.invoiceInformationRequestTimeOfServiceLabel.Location = new System.Drawing.Point(191, 575);
             this.invoiceInformationRequestTimeOfServiceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationRequestTimeOfServiceLabel.Name = "invoiceInformationRequestTimeOfServiceLabel";
             this.invoiceInformationRequestTimeOfServiceLabel.Size = new System.Drawing.Size(237, 23);
@@ -240,7 +222,7 @@
             // invoiceInformationDescriptionLabelPrompt
             // 
             this.invoiceInformationDescriptionLabelPrompt.AutoSize = true;
-            this.invoiceInformationDescriptionLabelPrompt.Location = new System.Drawing.Point(8, 462);
+            this.invoiceInformationDescriptionLabelPrompt.Location = new System.Drawing.Point(8, 429);
             this.invoiceInformationDescriptionLabelPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationDescriptionLabelPrompt.Name = "invoiceInformationDescriptionLabelPrompt";
             this.invoiceInformationDescriptionLabelPrompt.Size = new System.Drawing.Size(284, 17);
@@ -280,7 +262,7 @@
             // invoiceInformationAnimalsLabel
             // 
             this.invoiceInformationAnimalsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.invoiceInformationAnimalsLabel.Location = new System.Drawing.Point(191, 674);
+            this.invoiceInformationAnimalsLabel.Location = new System.Drawing.Point(191, 641);
             this.invoiceInformationAnimalsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationAnimalsLabel.Name = "invoiceInformationAnimalsLabel";
             this.invoiceInformationAnimalsLabel.Size = new System.Drawing.Size(237, 23);
@@ -300,7 +282,7 @@
             // invoiceInformationWorkOrderTypeLabel
             // 
             this.invoiceInformationWorkOrderTypeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.invoiceInformationWorkOrderTypeLabel.Location = new System.Drawing.Point(191, 426);
+            this.invoiceInformationWorkOrderTypeLabel.Location = new System.Drawing.Point(191, 393);
             this.invoiceInformationWorkOrderTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationWorkOrderTypeLabel.Name = "invoiceInformationWorkOrderTypeLabel";
             this.invoiceInformationWorkOrderTypeLabel.Size = new System.Drawing.Size(237, 23);
@@ -310,7 +292,7 @@
             // invoiceInformationWorkOrderTypeLabelPrompt
             // 
             this.invoiceInformationWorkOrderTypeLabelPrompt.AutoSize = true;
-            this.invoiceInformationWorkOrderTypeLabelPrompt.Location = new System.Drawing.Point(8, 430);
+            this.invoiceInformationWorkOrderTypeLabelPrompt.Location = new System.Drawing.Point(8, 397);
             this.invoiceInformationWorkOrderTypeLabelPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationWorkOrderTypeLabelPrompt.Name = "invoiceInformationWorkOrderTypeLabelPrompt";
             this.invoiceInformationWorkOrderTypeLabelPrompt.Size = new System.Drawing.Size(118, 17);
@@ -320,7 +302,7 @@
             // invoiceInformationAnimalsLabelPrompt
             // 
             this.invoiceInformationAnimalsLabelPrompt.AutoSize = true;
-            this.invoiceInformationAnimalsLabelPrompt.Location = new System.Drawing.Point(8, 674);
+            this.invoiceInformationAnimalsLabelPrompt.Location = new System.Drawing.Point(8, 641);
             this.invoiceInformationAnimalsLabelPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationAnimalsLabelPrompt.Name = "invoiceInformationAnimalsLabelPrompt";
             this.invoiceInformationAnimalsLabelPrompt.Size = new System.Drawing.Size(117, 17);
@@ -390,7 +372,7 @@
             // invoiceInformationPermissionToEnterLabelPrompt
             // 
             this.invoiceInformationPermissionToEnterLabelPrompt.AutoSize = true;
-            this.invoiceInformationPermissionToEnterLabelPrompt.Location = new System.Drawing.Point(8, 642);
+            this.invoiceInformationPermissionToEnterLabelPrompt.Location = new System.Drawing.Point(8, 609);
             this.invoiceInformationPermissionToEnterLabelPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invoiceInformationPermissionToEnterLabelPrompt.Name = "invoiceInformationPermissionToEnterLabelPrompt";
             this.invoiceInformationPermissionToEnterLabelPrompt.Size = new System.Drawing.Size(176, 17);
@@ -488,9 +470,7 @@
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationStreetAddressLabel);
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationPermissionToEnterLabel);
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationAlternatePhoneNumberLabelPrompt);
-            this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationNonMilitaryEmailLabel);
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationCommunityLabel);
-            this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationNonMilitaryEmailLabelPrompt);
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationAlternatePhoneNumberLabel);
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationRequestTimeOfServiceLabelPrompt);
             this.invoiceInformationGroupBox.Controls.Add(this.invoiceInformationFirstNameLabel);
@@ -519,7 +499,7 @@
             this.invoiceInformationGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.invoiceInformationGroupBox.Name = "invoiceInformationGroupBox";
             this.invoiceInformationGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.invoiceInformationGroupBox.Size = new System.Drawing.Size(441, 751);
+            this.invoiceInformationGroupBox.Size = new System.Drawing.Size(432, 740);
             this.invoiceInformationGroupBox.TabIndex = 1037;
             this.invoiceInformationGroupBox.TabStop = false;
             this.invoiceInformationGroupBox.Text = "Invoice Information";
@@ -538,15 +518,23 @@
             this.gbxCommentsAndStatus.TabStop = false;
             this.gbxCommentsAndStatus.Text = "Status of Work Order";
             // 
-            // rButtonComplete
+            // rTxtBoxComments
             // 
-            this.rButtonComplete.AutoSize = true;
-            this.rButtonComplete.Location = new System.Drawing.Point(7, 22);
-            this.rButtonComplete.Name = "rButtonComplete";
-            this.rButtonComplete.Size = new System.Drawing.Size(88, 21);
-            this.rButtonComplete.TabIndex = 0;
-            this.rButtonComplete.Text = "Complete";
-            this.rButtonComplete.UseVisualStyleBackColor = true;
+            this.rTxtBoxComments.Location = new System.Drawing.Point(10, 71);
+            this.rTxtBoxComments.Name = "rTxtBoxComments";
+            this.rTxtBoxComments.ReadOnly = true;
+            this.rTxtBoxComments.Size = new System.Drawing.Size(360, 118);
+            this.rTxtBoxComments.TabIndex = 3;
+            this.rTxtBoxComments.Text = "";
+            // 
+            // lblCommentsPrompt
+            // 
+            this.lblCommentsPrompt.AutoSize = true;
+            this.lblCommentsPrompt.Location = new System.Drawing.Point(7, 50);
+            this.lblCommentsPrompt.Name = "lblCommentsPrompt";
+            this.lblCommentsPrompt.Size = new System.Drawing.Size(78, 17);
+            this.lblCommentsPrompt.TabIndex = 2;
+            this.lblCommentsPrompt.Text = "Comments:\r\n";
             // 
             // rButtonIncomplete
             // 
@@ -560,29 +548,21 @@
             this.rButtonIncomplete.Text = "Incomplete";
             this.rButtonIncomplete.UseVisualStyleBackColor = true;
             // 
-            // lblCommentsPrompt
+            // rButtonComplete
             // 
-            this.lblCommentsPrompt.AutoSize = true;
-            this.lblCommentsPrompt.Location = new System.Drawing.Point(7, 50);
-            this.lblCommentsPrompt.Name = "lblCommentsPrompt";
-            this.lblCommentsPrompt.Size = new System.Drawing.Size(78, 17);
-            this.lblCommentsPrompt.TabIndex = 2;
-            this.lblCommentsPrompt.Text = "Comments:\r\n";
-            // 
-            // rTxtBoxComments
-            // 
-            this.rTxtBoxComments.Location = new System.Drawing.Point(10, 71);
-            this.rTxtBoxComments.Name = "rTxtBoxComments";
-            this.rTxtBoxComments.ReadOnly = true;
-            this.rTxtBoxComments.Size = new System.Drawing.Size(360, 118);
-            this.rTxtBoxComments.TabIndex = 3;
-            this.rTxtBoxComments.Text = "";
+            this.rButtonComplete.AutoSize = true;
+            this.rButtonComplete.Location = new System.Drawing.Point(7, 22);
+            this.rButtonComplete.Name = "rButtonComplete";
+            this.rButtonComplete.Size = new System.Drawing.Size(88, 21);
+            this.rButtonComplete.TabIndex = 0;
+            this.rButtonComplete.Text = "Complete";
+            this.rButtonComplete.UseVisualStyleBackColor = true;
             // 
             // WorkOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 764);
+            this.ClientSize = new System.Drawing.Size(845, 754);
             this.Controls.Add(this.gbxCommentsAndStatus);
             this.Controls.Add(this.invoiceInformationGroupBox);
             this.Controls.Add(this.newInvoiceButtonLabelPrompt);
@@ -611,8 +591,6 @@
         private System.Windows.Forms.Button printInvoiceButton;
         private System.Windows.Forms.RichTextBox invoiceInformationDescriptionOfRequestRichTextBox;
         private System.Windows.Forms.Label invoiceInformationPermissionToEnterLabel;
-        private System.Windows.Forms.Label invoiceInformationNonMilitaryEmailLabel;
-        private System.Windows.Forms.Label invoiceInformationNonMilitaryEmailLabelPrompt;
         private System.Windows.Forms.Label invoiceInformationRequestTimeOfServiceLabelPrompt;
         private System.Windows.Forms.Label invoiceInformationPrimaryPhoneTypeLabel;
         private System.Windows.Forms.Label invoiceInformationPrimaryPhoneTypeLabelPrompt;

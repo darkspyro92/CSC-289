@@ -82,3 +82,6 @@ E:\CSC-289-master (3)\CSC-289-master\CSC-289-master\Invoice\Invoice\obj\Debug\In
 E:\Invoice\Invoice\bin\Debug\Invoice.exe.config
 E:\Invoice\Invoice\obj\Debug\Invoice.exe
 E:\Invoice\Invoice\obj\Debug\Invoice.pdb
+E:\SP2017\CSC 289\Invoice\Invoice\bin\Debug\Invoice.exe.config
+E:\SP2017\CSC 289\Invoice\Invoice\obj\Debug\Invoice.exe
+E:\SP2017\CSC 289\Invoice\Invoice\obj\Debug\Invoice.pdb

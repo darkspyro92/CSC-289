@@ -33,7 +33,7 @@ namespace Invoice
 
             /**
              * 1) emailCheck is the regular expression for our email field. 
-             * 2) passwordCheck is the regular expression for our password field. Youa are required to have a password that is at minimum 6 characters long with at least one lowercase letter, one uppercase letter, and one number.  
+             * 2) passwordCheck is the regular expression for our password field. You are required to have a password that is at minimum 6 characters long with at least one lowercase letter, one uppercase letter, and one number.  
              */
             string emailCheck = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
             string passwordCheck = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{6,}$";
