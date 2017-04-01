@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abcaba5_invoiceloginDataSet2.cs">
+      <DependentUpon>abcaba5_invoiceloginDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="abcaba5_invoiceloginDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
