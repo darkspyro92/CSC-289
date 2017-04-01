@@ -28,7 +28,7 @@ namespace Invoice
         {
             RadioButton[] rb = new RadioButton[] { occupantRadioButton, officeWorkerRadioButton, contractorRadioButton };
 
-            var checkedButton = panel1.Controls.OfType<RadioButton>()
+            var checkedButton = rolePanel.Controls.OfType<RadioButton>()
                                       .FirstOrDefault(r => r.Checked);
 
             /**
@@ -153,6 +153,63 @@ namespace Invoice
         private void RegisterForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void occupantRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (occupantRadioButton.Checked == true)
+            {
+                companyPanel.Visible = false;
+                passwordPromptLabel.Location = new Point(18, 3);
+                passwordEntryTextBox.Location = new Point(109, 0);
+                confirmPasswordPromptLabel.Location = new Point(21, 29);
+                confirmPasswordEntryTextBox.Location = new Point(109, 26);
+                rolePanel.Location = new Point(13, 52);
+                registerButton.Location = new Point(13, 82);
+                backButton.Location = new Point(105, 82);
+                cancelButton.Location = new Point(196, 82);
+                this.Size = new Size(300,290);
+            }
+
+            else if (occupantRadioButton.Checked == false)
+            {
+                companyPanel.Visible = true;
+                passwordPromptLabel.Location = new Point(49, 248);
+                passwordEntryTextBox.Location = new Point(111, 245);
+                confirmPasswordPromptLabel.Location = new Point(11, 275);
+                confirmPasswordEntryTextBox.Location = new Point(111, 272);
+                rolePanel.Location = new Point(14, 298);
+                registerButton.Location = new Point(14, 328);
+                backButton.Location = new Point(105, 328);
+                cancelButton.Location = new Point(196, 328);
+                this.Size = new Size(300, 397);
+            }
+        }
+
+        private void officeWorkerRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (officeWorkerRadioButton.Checked == true)
+            {
+
+            }
+
+            else if (officeWorkerRadioButton.Checked == false)
+            {
+
+            }
+        }
+
+        private void contractorRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (contractorRadioButton.Checked == true)
+            {
+
+            }
+
+            else if (contractorRadioButton.Checked == false)
+            {
+
+            }
         }
     }
 }
