@@ -85,3 +85,21 @@ E:\Invoice\Invoice\obj\Debug\Invoice.pdb
 E:\SP2017\CSC 289\Invoice\Invoice\bin\Debug\Invoice.exe.config
 E:\SP2017\CSC 289\Invoice\Invoice\obj\Debug\Invoice.exe
 E:\SP2017\CSC 289\Invoice\Invoice\obj\Debug\Invoice.pdb
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\bin\Debug\Invoice.exe.config
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.exe
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.pdb
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.csprojResolveAssemblyReference.cache
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.AdminForm.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.ContractorWorkOrderForm.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.OfficeWorkOrder.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.WorkOrderForm.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.LoginForm.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.NewWorkOrderForm.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.Properties.Resources.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.RegisterForm.resources
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\obj\Debug\Invoice.csproj.GenerateResource.Cache
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\bin\Debug\ProjectDB.accdb
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\bin\Debug\Invoice.exe
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\bin\Debug\Invoice.pdb
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\bin\Debug\MySql.Data.dll
+C:\Users\renzi\Source\Repos\CSC-289\Invoice\Invoice\bin\Debug\MySql.Data.xml

@@ -28,7 +28,7 @@ namespace Invoice
         {
             RadioButton[] rb = new RadioButton[] { occupantRadioButton, officeWorkerRadioButton, contractorRadioButton };
 
-            var checkedButton = panel1.Controls.OfType<RadioButton>()
+            var checkedButton = rolePanel.Controls.OfType<RadioButton>()
                                       .FirstOrDefault(r => r.Checked);
 
             /**
@@ -153,6 +153,30 @@ namespace Invoice
         private void RegisterForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void contractorRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (contractorRadioButton.Checked == true)
+            {
+                this.Size = new Size(300, 397);
+                companyPanel.Visible = true;
+                companyPanel.Size = new Size(270, 104);
+                rolePanel.Location = new Point(14, 298);
+                registerButton.Location = new Point(14, 328);
+                backButton.Location = new Point(105, 328);
+                cancelButton.Location = new Point(196, 328);
+            }
+            else
+            {
+                this.Size = new Size(300, 310);
+                companyPanel.Visible = false;
+                companyPanel.Size = new Size(1, 1);
+                rolePanel.Location = new Point(15, 197);
+                registerButton.Location = new Point(19, 238);
+                backButton.Location = new Point(111, 238);
+                cancelButton.Location = new Point(202, 238);
+            }
         }
     }
 }
