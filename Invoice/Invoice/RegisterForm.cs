@@ -28,30 +28,26 @@ namespace Invoice
         {
             RadioButton[] rb = new RadioButton[] { occupantRadioButton, officeWorkerRadioButton, contractorRadioButton };
 
-            var checkedButton = rolePanel.Controls.OfType<RadioButton>()
+            var checkedButton = panel1.Controls.OfType<RadioButton>()
                                       .FirstOrDefault(r => r.Checked);
 
             /**
              * 1) emailCheck is the regular expression for our email field. 
-             * 2) passwordCheck is the regular expression for our password field. You are required to have a password that is at minimum 6 characters long with at 
-             *      least one lowercase letter, one uppercase letter, and one number.  
+             * 2) passwordCheck is the regular expression for our password field. You are required to have a password that is at minimum 6 characters long with at least one lowercase letter, one uppercase letter, and one number.  
              */
             string emailCheck = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
             string passwordCheck = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{6,}$";
 
             /**
-             * Checks the email & password using the RegularExpressions from above, confirms that your entered password matches what you entered when asked to confirm it, 
-             * and checks that the email you entered has not been used previously. 
+             * Checks the email & password using the RegularExpressions from above, confirms that your entered password matches what you entered when asked to confirm it, and checks that the email you entered has not been used previously. 
              * */
-            if (Regex.IsMatch(emailEntryTextBox.Text, emailCheck) && Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck) && passwordEntryTextBox.Text == 
-                confirmPasswordEntryTextBox.Text && emailAvailable() && rb.Any(radio => radio.Checked))
+            if (Regex.IsMatch(emailEntryTextBox.Text, emailCheck) && Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck) && passwordEntryTextBox.Text == confirmPasswordEntryTextBox.Text && emailAvailable() && rb.Any(radio => radio.Checked))
             {
 
                 /**
                  *  MySQLCommand that will be used to insert the entered first name, last name, email, password, and usertype into the User table into the invoicelogin database. 
                  */
-                MySqlCommand cmd = new MySqlCommand("insert into User values ('" + 0 + "', '" + firstNameEntryTextBox.Text + "', '" + lastNameEntryTextBox.Text + "', '" + 
-                    emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "', '" + checkedButton.Text + "', '" + 0 + "')", connection);
+                MySqlCommand cmd = new MySqlCommand("insert into User values ('" + 0 + "', '" + firstNameEntryTextBox.Text + "', '" + lastNameEntryTextBox.Text + "', '" + emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "', '" + checkedButton.Text + "', '" + 0 + "')", connection);
 
                 /**
                  * Opens a connection to the MySQL Database 
@@ -59,8 +55,7 @@ namespace Invoice
                 connection.Open();
 
                 /**
-                 * Executes the above SQL Statement as well as returns an integer of rows that were affected. As long as this value is higher than 0 we know that we have inserted the
-                 * information & added a new row to the User table. 
+                 * Executes the above SQL Statement as well as returns an integer of rows that were affected. As long as this value is higher than 0 we know that we have inserted the information & added a new row to the User table. 
                  * */
                 int i = cmd.ExecuteNonQuery();
                 connection.Close();
@@ -83,8 +78,7 @@ namespace Invoice
              */
             else if (!Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck))
             {
-                MessageBox.Show("Password does not meet all requirements \n 1) Password Must Be At Minimum 6 Characters\n 2) Password Must Contain At Least One Uppercase Letter\n 3) " +
-                    "Password Must Contain At Least One Lowercase Letter\n 4) Password Must Contain At Least One Number");
+                MessageBox.Show("Password does not meet all requirements \n 1) Password Must Be At Minimum 6 Characters\n 2) Password Must Contain At Least One Uppercase Letter\n 3) Password Must Contain At Least One Lowercase Letter\n 4) Password Must Contain At Least One Number");
             }
             /**
              * If the passwords that were entered in the password & confirm password texboxes don't match then a MessageBox will inform you that the passwords do not match.  
@@ -159,30 +153,6 @@ namespace Invoice
         private void RegisterForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void contractorRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if (contractorRadioButton.Checked == true)
-            {
-                this.Size = new Size(287, 397);
-                companyPanel.Visible = true;
-                companyPanel.Size = new Size(270, 104);
-                rolePanel.Location = new Point(14, 298);
-                registerButton.Location = new Point(14, 328);
-                backButton.Location = new Point(105, 328);
-                cancelButton.Location = new Point(196, 328);
-            }
-            else
-            {
-                this.Size = new Size(287, 310);
-                companyPanel.Visible = false;
-                companyPanel.Size = new Size(1, 1);
-                rolePanel.Location = new Point(15, 197);
-                registerButton.Location = new Point(19, 238);
-                backButton.Location = new Point(111, 238);
-                cancelButton.Location = new Point(202, 238);
-            }
         }
     }
 }
