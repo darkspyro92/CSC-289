@@ -18,5 +18,20 @@ namespace Invoice
             InitializeComponent();
            
         }
+
+        private void lblFirstNamePrompt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLastNamePrompt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStreetAddressPrompt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

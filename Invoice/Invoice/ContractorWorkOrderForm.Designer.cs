@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblFirstNamePrompt = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblLastNamePrompt = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lbxWorkOrders = new System.Windows.Forms.ListBox();
-            this.lblWorkOrderPrompt = new System.Windows.Forms.Label();
-            this.lblStreetAddressPrompt = new System.Windows.Forms.Label();
-            this.lblStreetAddress = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblDatePrompt = new System.Windows.Forms.Label();
             this.rtbxDescriptionOfRequest = new System.Windows.Forms.RichTextBox();
             this.lblPermissionToEnter = new System.Windows.Forms.Label();
             this.lblRequestTimeOfServicePrompt = new System.Windows.Forms.Label();
@@ -47,16 +41,22 @@
             this.lblWorkOrderTypePrompt = new System.Windows.Forms.Label();
             this.lblAnimals = new System.Windows.Forms.Label();
             this.lblWorkOrderType = new System.Windows.Forms.Label();
+            this.lblStreetAddressPrompt = new System.Windows.Forms.Label();
+            this.lblStreetAddress = new System.Windows.Forms.Label();
+            this.lblFirstNamePrompt = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.lblLastNamePrompt = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lbxWorkOrders = new System.Windows.Forms.ListBox();
+            this.lblWorkOrderPrompt = new System.Windows.Forms.Label();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
-            this.lblDatePrompt = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.lblCommentsPrompt = new System.Windows.Forms.Label();
-            this.rtxtComments = new System.Windows.Forms.RichTextBox();
-            this.rbtnComplete = new System.Windows.Forms.RadioButton();
             this.rbtnIncomplete = new System.Windows.Forms.RadioButton();
+            this.rbtnComplete = new System.Windows.Forms.RadioButton();
+            this.rtxtComments = new System.Windows.Forms.RichTextBox();
+            this.lblCommentsPrompt = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbxUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -88,83 +88,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Work Order:";
             // 
-            // lblFirstNamePrompt
+            // lblDate
             // 
-            this.lblFirstNamePrompt.AutoSize = true;
-            this.lblFirstNamePrompt.Location = new System.Drawing.Point(9, 24);
-            this.lblFirstNamePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFirstNamePrompt.Name = "lblFirstNamePrompt";
-            this.lblFirstNamePrompt.Size = new System.Drawing.Size(80, 17);
-            this.lblFirstNamePrompt.TabIndex = 1038;
-            this.lblFirstNamePrompt.Text = "First Name:";
+            this.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDate.Location = new System.Drawing.Point(191, 421);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(236, 23);
+            this.lblDate.TabIndex = 1053;
             // 
-            // lblFirstName
+            // lblDatePrompt
             // 
-            this.lblFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFirstName.Location = new System.Drawing.Point(191, 21);
-            this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(236, 23);
-            this.lblFirstName.TabIndex = 1035;
-            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblLastNamePrompt
-            // 
-            this.lblLastNamePrompt.AutoSize = true;
-            this.lblLastNamePrompt.Location = new System.Drawing.Point(9, 60);
-            this.lblLastNamePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLastNamePrompt.Name = "lblLastNamePrompt";
-            this.lblLastNamePrompt.Size = new System.Drawing.Size(80, 17);
-            this.lblLastNamePrompt.TabIndex = 1037;
-            this.lblLastNamePrompt.Text = "Last Name:";
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLastName.Location = new System.Drawing.Point(191, 57);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(236, 23);
-            this.lblLastName.TabIndex = 1036;
-            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbxWorkOrders
-            // 
-            this.lbxWorkOrders.FormattingEnabled = true;
-            this.lbxWorkOrders.ItemHeight = 16;
-            this.lbxWorkOrders.Location = new System.Drawing.Point(12, 29);
-            this.lbxWorkOrders.Name = "lbxWorkOrders";
-            this.lbxWorkOrders.Size = new System.Drawing.Size(320, 196);
-            this.lbxWorkOrders.TabIndex = 1;
-            // 
-            // lblWorkOrderPrompt
-            // 
-            this.lblWorkOrderPrompt.AutoSize = true;
-            this.lblWorkOrderPrompt.Location = new System.Drawing.Point(12, 9);
-            this.lblWorkOrderPrompt.Name = "lblWorkOrderPrompt";
-            this.lblWorkOrderPrompt.Size = new System.Drawing.Size(141, 17);
-            this.lblWorkOrderPrompt.TabIndex = 2;
-            this.lblWorkOrderPrompt.Text = "Select a Work Order:";
-            // 
-            // lblStreetAddressPrompt
-            // 
-            this.lblStreetAddressPrompt.AutoSize = true;
-            this.lblStreetAddressPrompt.Location = new System.Drawing.Point(9, 97);
-            this.lblStreetAddressPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStreetAddressPrompt.Name = "lblStreetAddressPrompt";
-            this.lblStreetAddressPrompt.Size = new System.Drawing.Size(106, 17);
-            this.lblStreetAddressPrompt.TabIndex = 1040;
-            this.lblStreetAddressPrompt.Text = "Street Address:";
-            // 
-            // lblStreetAddress
-            // 
-            this.lblStreetAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblStreetAddress.Location = new System.Drawing.Point(191, 94);
-            this.lblStreetAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStreetAddress.Name = "lblStreetAddress";
-            this.lblStreetAddress.Size = new System.Drawing.Size(236, 23);
-            this.lblStreetAddress.TabIndex = 1039;
-            this.lblStreetAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDatePrompt.AutoSize = true;
+            this.lblDatePrompt.Location = new System.Drawing.Point(8, 422);
+            this.lblDatePrompt.Name = "lblDatePrompt";
+            this.lblDatePrompt.Size = new System.Drawing.Size(87, 13);
+            this.lblDatePrompt.TabIndex = 1052;
+            this.lblDatePrompt.Text = "Scheduled Date:";
             // 
             // rtbxDescriptionOfRequest
             // 
@@ -179,7 +118,7 @@
             // lblPermissionToEnter
             // 
             this.lblPermissionToEnter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPermissionToEnter.Location = new System.Drawing.Point(191, 352);
+            this.lblPermissionToEnter.Location = new System.Drawing.Point(191, 353);
             this.lblPermissionToEnter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPermissionToEnter.Name = "lblPermissionToEnter";
             this.lblPermissionToEnter.Size = new System.Drawing.Size(237, 23);
@@ -192,17 +131,17 @@
             this.lblRequestTimeOfServicePrompt.Location = new System.Drawing.Point(8, 323);
             this.lblRequestTimeOfServicePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRequestTimeOfServicePrompt.Name = "lblRequestTimeOfServicePrompt";
-            this.lblRequestTimeOfServicePrompt.Size = new System.Drawing.Size(167, 17);
+            this.lblRequestTimeOfServicePrompt.Size = new System.Drawing.Size(127, 13);
             this.lblRequestTimeOfServicePrompt.TabIndex = 1050;
             this.lblRequestTimeOfServicePrompt.Text = "Request Time of Service:";
             // 
             // lblPermissionToEnterPrompt
             // 
             this.lblPermissionToEnterPrompt.AutoSize = true;
-            this.lblPermissionToEnterPrompt.Location = new System.Drawing.Point(8, 353);
+            this.lblPermissionToEnterPrompt.Location = new System.Drawing.Point(8, 356);
             this.lblPermissionToEnterPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPermissionToEnterPrompt.Name = "lblPermissionToEnterPrompt";
-            this.lblPermissionToEnterPrompt.Size = new System.Drawing.Size(176, 17);
+            this.lblPermissionToEnterPrompt.Size = new System.Drawing.Size(130, 13);
             this.lblPermissionToEnterPrompt.TabIndex = 1046;
             this.lblPermissionToEnterPrompt.Text = "Permission to Enter (PTE):";
             // 
@@ -222,34 +161,34 @@
             this.lblDescriptionPrompt.Location = new System.Drawing.Point(8, 173);
             this.lblDescriptionPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescriptionPrompt.Name = "lblDescriptionPrompt";
-            this.lblDescriptionPrompt.Size = new System.Drawing.Size(284, 17);
+            this.lblDescriptionPrompt.Size = new System.Drawing.Size(214, 13);
             this.lblDescriptionPrompt.TabIndex = 1049;
             this.lblDescriptionPrompt.Text = "Description of Request (Including Location):";
             // 
             // lblAnimalsPrompt
             // 
             this.lblAnimalsPrompt.AutoSize = true;
-            this.lblAnimalsPrompt.Location = new System.Drawing.Point(8, 385);
+            this.lblAnimalsPrompt.Location = new System.Drawing.Point(8, 389);
             this.lblAnimalsPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAnimalsPrompt.Name = "lblAnimalsPrompt";
-            this.lblAnimalsPrompt.Size = new System.Drawing.Size(117, 17);
+            this.lblAnimalsPrompt.Size = new System.Drawing.Size(88, 13);
             this.lblAnimalsPrompt.TabIndex = 1047;
             this.lblAnimalsPrompt.Text = "Animals in Home:";
             // 
             // lblWorkOrderTypePrompt
             // 
             this.lblWorkOrderTypePrompt.AutoSize = true;
-            this.lblWorkOrderTypePrompt.Location = new System.Drawing.Point(9, 140);
+            this.lblWorkOrderTypePrompt.Location = new System.Drawing.Point(9, 138);
             this.lblWorkOrderTypePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWorkOrderTypePrompt.Name = "lblWorkOrderTypePrompt";
-            this.lblWorkOrderTypePrompt.Size = new System.Drawing.Size(118, 17);
+            this.lblWorkOrderTypePrompt.Size = new System.Drawing.Size(89, 13);
             this.lblWorkOrderTypePrompt.TabIndex = 1048;
             this.lblWorkOrderTypePrompt.Text = "Work Order Type";
             // 
             // lblAnimals
             // 
             this.lblAnimals.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAnimals.Location = new System.Drawing.Point(191, 385);
+            this.lblAnimals.Location = new System.Drawing.Point(191, 387);
             this.lblAnimals.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAnimals.Name = "lblAnimals";
             this.lblAnimals.Size = new System.Drawing.Size(237, 23);
@@ -259,12 +198,92 @@
             // lblWorkOrderType
             // 
             this.lblWorkOrderType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblWorkOrderType.Location = new System.Drawing.Point(191, 137);
+            this.lblWorkOrderType.Location = new System.Drawing.Point(191, 135);
             this.lblWorkOrderType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWorkOrderType.Name = "lblWorkOrderType";
             this.lblWorkOrderType.Size = new System.Drawing.Size(237, 23);
             this.lblWorkOrderType.TabIndex = 1041;
             this.lblWorkOrderType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblStreetAddressPrompt
+            // 
+            this.lblStreetAddressPrompt.AutoSize = true;
+            this.lblStreetAddressPrompt.Location = new System.Drawing.Point(9, 100);
+            this.lblStreetAddressPrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStreetAddressPrompt.Name = "lblStreetAddressPrompt";
+            this.lblStreetAddressPrompt.Size = new System.Drawing.Size(79, 13);
+            this.lblStreetAddressPrompt.TabIndex = 1040;
+            this.lblStreetAddressPrompt.Text = "Street Address:";
+            this.lblStreetAddressPrompt.Click += new System.EventHandler(this.lblStreetAddressPrompt_Click);
+            // 
+            // lblStreetAddress
+            // 
+            this.lblStreetAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblStreetAddress.Location = new System.Drawing.Point(191, 97);
+            this.lblStreetAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStreetAddress.Name = "lblStreetAddress";
+            this.lblStreetAddress.Size = new System.Drawing.Size(236, 23);
+            this.lblStreetAddress.TabIndex = 1039;
+            this.lblStreetAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblFirstNamePrompt
+            // 
+            this.lblFirstNamePrompt.AutoSize = true;
+            this.lblFirstNamePrompt.Location = new System.Drawing.Point(9, 24);
+            this.lblFirstNamePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFirstNamePrompt.Name = "lblFirstNamePrompt";
+            this.lblFirstNamePrompt.Size = new System.Drawing.Size(60, 13);
+            this.lblFirstNamePrompt.TabIndex = 1038;
+            this.lblFirstNamePrompt.Text = "First Name:";
+            this.lblFirstNamePrompt.Click += new System.EventHandler(this.lblFirstNamePrompt_Click);
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFirstName.Location = new System.Drawing.Point(191, 21);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(236, 23);
+            this.lblFirstName.TabIndex = 1035;
+            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLastNamePrompt
+            // 
+            this.lblLastNamePrompt.AutoSize = true;
+            this.lblLastNamePrompt.Location = new System.Drawing.Point(9, 62);
+            this.lblLastNamePrompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastNamePrompt.Name = "lblLastNamePrompt";
+            this.lblLastNamePrompt.Size = new System.Drawing.Size(61, 13);
+            this.lblLastNamePrompt.TabIndex = 1037;
+            this.lblLastNamePrompt.Text = "Last Name:";
+            this.lblLastNamePrompt.Click += new System.EventHandler(this.lblLastNamePrompt_Click);
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblLastName.Location = new System.Drawing.Point(191, 59);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(236, 23);
+            this.lblLastName.TabIndex = 1036;
+            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbxWorkOrders
+            // 
+            this.lbxWorkOrders.FormattingEnabled = true;
+            this.lbxWorkOrders.Location = new System.Drawing.Point(12, 29);
+            this.lbxWorkOrders.Name = "lbxWorkOrders";
+            this.lbxWorkOrders.Size = new System.Drawing.Size(320, 186);
+            this.lbxWorkOrders.TabIndex = 1;
+            // 
+            // lblWorkOrderPrompt
+            // 
+            this.lblWorkOrderPrompt.AutoSize = true;
+            this.lblWorkOrderPrompt.Location = new System.Drawing.Point(12, 9);
+            this.lblWorkOrderPrompt.Name = "lblWorkOrderPrompt";
+            this.lblWorkOrderPrompt.Size = new System.Drawing.Size(107, 13);
+            this.lblWorkOrderPrompt.TabIndex = 2;
+            this.lblWorkOrderPrompt.Text = "Select a Work Order:";
             // 
             // gbxUpdate
             // 
@@ -282,40 +301,44 @@
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Updates:";
             // 
-            // lblDatePrompt
+            // rbtnIncomplete
             // 
-            this.lblDatePrompt.AutoSize = true;
-            this.lblDatePrompt.Location = new System.Drawing.Point(9, 422);
-            this.lblDatePrompt.Name = "lblDatePrompt";
-            this.lblDatePrompt.Size = new System.Drawing.Size(113, 17);
-            this.lblDatePrompt.TabIndex = 1052;
-            this.lblDatePrompt.Text = "Scheduled Date:";
+            this.rbtnIncomplete.AutoSize = true;
+            this.rbtnIncomplete.Checked = true;
+            this.rbtnIncomplete.Location = new System.Drawing.Point(196, 154);
+            this.rbtnIncomplete.Name = "rbtnIncomplete";
+            this.rbtnIncomplete.Size = new System.Drawing.Size(77, 17);
+            this.rbtnIncomplete.TabIndex = 6;
+            this.rbtnIncomplete.TabStop = true;
+            this.rbtnIncomplete.Text = "Incomplete";
+            this.rbtnIncomplete.UseVisualStyleBackColor = true;
             // 
-            // lblDate
+            // rbtnComplete
             // 
-            this.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDate.Location = new System.Drawing.Point(191, 422);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(236, 23);
-            this.lblDate.TabIndex = 1053;
+            this.rbtnComplete.AutoSize = true;
+            this.rbtnComplete.Location = new System.Drawing.Point(31, 154);
+            this.rbtnComplete.Name = "rbtnComplete";
+            this.rbtnComplete.Size = new System.Drawing.Size(69, 17);
+            this.rbtnComplete.TabIndex = 5;
+            this.rbtnComplete.Text = "Complete";
+            this.rbtnComplete.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
+            // rtxtComments
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(6, 181);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 45);
-            this.btnUpdate.TabIndex = 0;
-            this.btnUpdate.Text = "Save Updates";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.rtxtComments.Location = new System.Drawing.Point(10, 43);
+            this.rtxtComments.Name = "rtxtComments";
+            this.rtxtComments.Size = new System.Drawing.Size(305, 105);
+            this.rtxtComments.TabIndex = 4;
+            this.rtxtComments.Text = "";
             // 
-            // btnClear
+            // lblCommentsPrompt
             // 
-            this.btnClear.Location = new System.Drawing.Point(123, 181);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 45);
-            this.btnClear.TabIndex = 1;
-            this.btnClear.Text = "Clear Updates";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.lblCommentsPrompt.AutoSize = true;
+            this.lblCommentsPrompt.Location = new System.Drawing.Point(7, 22);
+            this.lblCommentsPrompt.Name = "lblCommentsPrompt";
+            this.lblCommentsPrompt.Size = new System.Drawing.Size(87, 13);
+            this.lblCommentsPrompt.TabIndex = 3;
+            this.lblCommentsPrompt.Text = "Enter Comments:";
             // 
             // btnLogout
             // 
@@ -326,44 +349,23 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
-            // lblCommentsPrompt
+            // btnClear
             // 
-            this.lblCommentsPrompt.AutoSize = true;
-            this.lblCommentsPrompt.Location = new System.Drawing.Point(7, 22);
-            this.lblCommentsPrompt.Name = "lblCommentsPrompt";
-            this.lblCommentsPrompt.Size = new System.Drawing.Size(116, 17);
-            this.lblCommentsPrompt.TabIndex = 3;
-            this.lblCommentsPrompt.Text = "Enter Comments:";
+            this.btnClear.Location = new System.Drawing.Point(123, 181);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 45);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "Clear Updates";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // rtxtComments
+            // btnUpdate
             // 
-            this.rtxtComments.Location = new System.Drawing.Point(10, 43);
-            this.rtxtComments.Name = "rtxtComments";
-            this.rtxtComments.Size = new System.Drawing.Size(305, 105);
-            this.rtxtComments.TabIndex = 4;
-            this.rtxtComments.Text = "";
-            // 
-            // rbtnComplete
-            // 
-            this.rbtnComplete.AutoSize = true;
-            this.rbtnComplete.Location = new System.Drawing.Point(31, 154);
-            this.rbtnComplete.Name = "rbtnComplete";
-            this.rbtnComplete.Size = new System.Drawing.Size(88, 21);
-            this.rbtnComplete.TabIndex = 5;
-            this.rbtnComplete.Text = "Complete";
-            this.rbtnComplete.UseVisualStyleBackColor = true;
-            // 
-            // rbtnIncomplete
-            // 
-            this.rbtnIncomplete.AutoSize = true;
-            this.rbtnIncomplete.Checked = true;
-            this.rbtnIncomplete.Location = new System.Drawing.Point(196, 154);
-            this.rbtnIncomplete.Name = "rbtnIncomplete";
-            this.rbtnIncomplete.Size = new System.Drawing.Size(97, 21);
-            this.rbtnIncomplete.TabIndex = 6;
-            this.rbtnIncomplete.TabStop = true;
-            this.rbtnIncomplete.Text = "Incomplete";
-            this.rbtnIncomplete.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(6, 181);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 45);
+            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.Text = "Save Updates";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // ContractorWorkOrderForm
             // 
