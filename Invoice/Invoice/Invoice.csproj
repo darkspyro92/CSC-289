@@ -77,13 +77,13 @@
     <Compile Include="OfficeWorkOrder.Designer.cs">
       <DependentUpon>OfficeWorkOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjectDBDataSet.cs">
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
+    <Compile Include="ProjectDBData.cs">
+      <DependentUpon>ProjectDBData.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ProjectDBDataSet.Designer.cs">
+    <Compile Include="ProjectDBData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
+      <DependentUpon>ProjectDBData.xsd</DependentUpon>
     </Compile>
     <Compile Include="WorkOrderForm.cs">
       <SubType>Form</SubType>
@@ -152,16 +152,16 @@
     <None Include="abcaba5_invoiceloginDataSet2.xss">
       <DependentUpon>abcaba5_invoiceloginDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="ProjectDBDataSet.xsc">
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
+    <None Include="ProjectDBData.xsc">
+      <DependentUpon>ProjectDBData.xsd</DependentUpon>
     </None>
-    <None Include="ProjectDBDataSet.xsd">
+    <None Include="ProjectDBData.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjectDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProjectDBData.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ProjectDBDataSet.xss">
-      <DependentUpon>ProjectDBDataSet.xsd</DependentUpon>
+    <None Include="ProjectDBData.xss">
+      <DependentUpon>ProjectDBData.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
