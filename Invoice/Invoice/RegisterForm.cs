@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using System.Data.OleDb;
 
 namespace Invoice
 {
@@ -22,13 +23,44 @@ namespace Invoice
         /**
          *  Connection to our MySQL Database "invoicelogin" which is located on the abcabasketball.com server (for now). 
          */
-        MySqlConnection connection = new MySqlConnection("server=abcabasketball.com;database=abcaba5_invoicelogin;uid=abcaba5;password=test1");
+        OleDbConnection connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ProjectDB.accdb;Persist Security Info=True");
 
-        private void registerButton_Click(object sender, EventArgs e)
+        /**
+         * Method to check if the entered email is already in use. 
+         */
+        private bool emailAvailable()
+        {
+            bool available = false;
+            connection.Open();
+
+            OleDbCommand cmd = new OleDbCommand("select email from UserAccounts where email='" + emailEntryTextBox.Text.ToLower() + "'", connection);
+            OleDbDataAdapter data = new OleDbDataAdapter(cmd);
+            DataTable table = new DataTable();
+
+            data.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                available = false;
+            }
+            else
+            {
+                available = true;
+            }
+            connection.Close();
+            return available;
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void registerButton_Click_1(object sender, EventArgs e)
         {
             RadioButton[] rb = new RadioButton[] { occupantRadioButton, officeWorkerRadioButton, contractorRadioButton };
 
-            var checkedButton = panel1.Controls.OfType<RadioButton>()
+            var checkedButton = rolePanel.Controls.OfType<RadioButton>()
                                       .FirstOrDefault(r => r.Checked);
 
             /**
@@ -44,24 +76,73 @@ namespace Invoice
             if (Regex.IsMatch(emailEntryTextBox.Text, emailCheck) && Regex.IsMatch(passwordEntryTextBox.Text, passwordCheck) && passwordEntryTextBox.Text == confirmPasswordEntryTextBox.Text && emailAvailable() && rb.Any(radio => radio.Checked))
             {
 
-                /**
+                if (checkedButton.Text == officeWorkerRadioButton.Text || checkedButton.Text == occupantRadioButton.Text)
+                {/**
                  *  MySQLCommand that will be used to insert the entered first name, last name, email, password, and usertype into the User table into the invoicelogin database. 
                  */
-                MySqlCommand cmd = new MySqlCommand("insert into User values ('" + 0 + "', '" + firstNameEntryTextBox.Text + "', '" + lastNameEntryTextBox.Text + "', '" + emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "', '" + checkedButton.Text + "', '" + 0 + "')", connection);
+                    OleDbCommand cmd = new OleDbCommand("insert into UserAccounts ([Email], [Password], [UserType], [Confirmed]) VALUES ('" + emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "', '" + checkedButton.Text + "', '" + 0 + "')", connection);
+                    /**
+                     * Opens a connection to the MySQL Database 
+                     */
+                    connection.Open();
 
-                /**
-                 * Opens a connection to the MySQL Database 
-                 */
-                connection.Open();
-
-                /**
-                 * Executes the above SQL Statement as well as returns an integer of rows that were affected. As long as this value is higher than 0 we know that we have inserted the information & added a new row to the User table. 
-                 * */
-                int i = cmd.ExecuteNonQuery();
-                connection.Close();
-                if (i > 0)
+                    /**
+                     * Executes the above SQL Statement as well as returns an integer of rows that were affected. As long as this value is higher than 0 we know that we have inserted the information & added a new row to the User table. 
+                     * */
+                    int i = cmd.ExecuteNonQuery();
+                    connection.Close();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Registration Successful");
+                    }
+                }
+                else if (checkedButton.Text == contractorRadioButton.Text)
                 {
-                    MessageBox.Show("Registration Successful");
+                    if (string.IsNullOrEmpty(companyNameEntryTextBox.Text))
+                    {
+                        ToolTip tip2 = new ToolTip();
+                        tip2.Show("Please Enter A Company Name", companyNameEntryTextBox, 10000);
+                    }
+                    if (string.IsNullOrEmpty(companyEmailEntryTextBox.Text))
+                    {
+                        ToolTip tip2 = new ToolTip();
+                        tip2.Show("Please Enter A Company Email", companyEmailEntryTextBox, 10000);
+                    }
+                    if (!Regex.IsMatch(companyEmailEntryTextBox.Text, emailCheck))
+                    {
+                        MessageBox.Show("Email is invalid");
+                    }
+                    if (string.IsNullOrEmpty(companyAddressEntryTextBox.Text))
+                    {
+                        ToolTip tip2 = new ToolTip();
+                        tip2.Show("Please Enter A Company Address", companyAddressEntryTextBox, 10000);
+                    }
+                    if (string.IsNullOrEmpty(companyPhoneEntryTextBox.Text))
+                    {
+                        ToolTip tip2 = new ToolTip();
+                        tip2.Show("Please Enter A Company Phone Number", companyPhoneEntryTextBox, 10000);
+                    }
+                    else if (!string.IsNullOrEmpty(companyNameEntryTextBox.Text) && !string.IsNullOrEmpty(companyEmailEntryTextBox.Text) && Regex.IsMatch(companyEmailEntryTextBox.Text, emailCheck) && !string.IsNullOrEmpty(companyAddressEntryTextBox.Text) && !string.IsNullOrEmpty(companyPhoneEntryTextBox.Text))
+                    {
+                        OleDbCommand cmd = new OleDbCommand("insert into UserAccounts ([Email], [Password], [UserType], [Confirmed]) VALUES ('" + emailEntryTextBox.Text.ToLower() + "', '" + passwordEntryTextBox.Text + "', '" + checkedButton.Text + "', '" + 0 + "')", connection);
+                        OleDbCommand cmd2 = new OleDbCommand("insert into ContractorCompany ([Company_Name], [Company_Address], [Phone#], [Email]) VALUES ('" + companyNameEntryTextBox.Text + "', '" + companyAddressEntryTextBox.Text + "', '" + companyPhoneEntryTextBox.Text + "', '" + companyEmailEntryTextBox.Text + "')", connection);
+
+                        /**
+                         * Opens a connection to the MySQL Database 
+                         */
+                        connection.Open();
+
+                        /**
+                         * Executes the above SQL Statement as well as returns an integer of rows that were affected. As long as this value is higher than 0 we know that we have inserted the information & added a new row to the User table. 
+                         * */
+                        int i = cmd.ExecuteNonQuery();
+                        int j = cmd2.ExecuteNonQuery();
+                        connection.Close();
+                        if (i > 0 && j > 0)
+                        {
+                            MessageBox.Show("Registration Successful");
+                        }
+                    }
                 }
             }
 
@@ -104,55 +185,48 @@ namespace Invoice
             {
                 MessageBox.Show("No User Type Selected");
             }
-
-        }
-
-        /**
-         * Method to check if the entered email is already in use. 
-         */
-        private bool emailAvailable()
-        {
-            bool available = false;
-            connection.Open();
-
-            MySqlCommand cmd = new MySqlCommand("select email from User where email='" + emailEntryTextBox.Text.ToLower() + "'", connection);
-            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-
-            data.Fill(table);
-            if (table.Rows.Count > 0)
-            {
-                available = false;
-            }
-            else
-            {
-                available = true;
-            }
-            connection.Close();
-            return available;
-        }
-
-        /**
-         * Closes the application.  
-         */
-        private void cancelButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         /**
          * Returns application to the Login Form
          */
-        private void backButton_Click(object sender, EventArgs e)
+        private void backButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
             LoginForm login = new LoginForm();
             login.Show();
         }
 
-        private void RegisterForm_Load(object sender, EventArgs e)
+        private void contractorRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            if (contractorRadioButton.Checked == true)
+            {
+                this.Size = new Size(300, 341);
+                companyPanel.Visible = true;
+                companyPanel.Size = new Size(270, 104);
+                rolePanel.Location = new Point(14, 220);
+                registerButton.Location = new Point(14, 260);
+                backButton.Location = new Point(105, 260);
+                cancelButton.Location = new Point(196, 260);
+            }
+            else
+            {
+                this.Size = new Size(300, 251);
+                companyPanel.Visible = false;
+                companyPanel.Size = new Size(1, 1);
+                rolePanel.Location = new Point(15, 133);
+                registerButton.Location = new Point(19, 173);
+                backButton.Location = new Point(111, 173);
+                cancelButton.Location = new Point(202, 173);
+            }
+        }
 
+        /**
+         * Closes the application.  
+         */
+        private void cancelButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

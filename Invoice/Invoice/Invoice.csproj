@@ -51,14 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="abcaba5_invoiceloginDataSet2.cs">
-      <DependentUpon>abcaba5_invoiceloginDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="abcaba5_invoiceloginDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>abcaba5_invoiceloginDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,17 +133,6 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="abcaba5_invoiceloginDataSet2.xsc">
-      <DependentUpon>abcaba5_invoiceloginDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="abcaba5_invoiceloginDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>abcaba5_invoiceloginDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="abcaba5_invoiceloginDataSet2.xss">
-      <DependentUpon>abcaba5_invoiceloginDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="ProjectDBData.xsc">
       <DependentUpon>ProjectDBData.xsd</DependentUpon>
     </None>
@@ -178,7 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ProjectDB.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
